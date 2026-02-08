@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 650">
+  <defs>
+    <style>
+      .node-thought { fill: #3498db; stroke: #2c3e50; stroke-width: 3; }
+      .node-act { fill: #e67e22; stroke: #2c3e50; stroke-width: 3; }
+      .node-observation { fill: #2ecc71; stroke: #2c3e50; stroke-width: 3; }
+      .text-title { font-family: Arial, sans-serif; font-size: 18px; fill: white; font-weight: bold; text-anchor: middle; }
+      .text-content { font-family: Arial, sans-serif; font-size: 12px; fill: white; text-anchor: middle; }
+      .text-example { font-family: Arial, sans-serif; font-size: 11px; fill: white; text-anchor: middle; font-style: italic; }
+      .main-title { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #2c3e50; }
+      .arrow { stroke: #2c3e50; stroke-width: 4; fill: none; marker-end: url(#arrowhead); }
+      .cycle-arrow { stroke: #9b59b6; stroke-width: 3; fill: none; stroke-dasharray: 8,4; marker-end: url(#cycle-arrowhead); }
+      .label-arrow { font-family: Arial, sans-serif; font-size: 13px; fill: #2c3e50; font-weight: bold; }
+      .icon { font-size: 28px; }
+    </style>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#2c3e50"/>
+    </marker>
+    <marker id="cycle-arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#9b59b6"/>
+    </marker>
+    <linearGradient id="thoughtGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5dade2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3498db;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="actGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f39c12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e67e22;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="observationGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#52be80;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2ecc71;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" class="main-title">ReAct Loop: Reason &amp; Act</text>
+  <text x="400" y="58" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 13px; fill: #7f8c8d; font-style: italic;">Combining reasoning with external tool execution</text>
+  
+  <!-- Node 1: THOUGHT (Top) -->
+  <g>
+    <ellipse cx="400" cy="150" rx="160" ry="80" fill="url(#thoughtGradient)" class="node-thought"/>
+    <text x="400" y="125" class="icon">🤔</text>
+    <text x="400" y="147" class="text-title">1. THOUGHT</text>
+    <text x="400" y="165" class="text-content">Model reasons internally</text>
+    <line x1="280" y1="175" x2="520" y2="175" stroke="white" stroke-width="1" opacity="0.5"/>
+    <text x="400" y="192" class="text-example">"I need to find the author</text>
+    <text x="400" y="207" class="text-example">of this book"</text>
+  </g>
+  
+  <!-- Arrow from THOUGHT to ACT -->
+  <path d="M 480 210 L 570 310" class="arrow"/>
+  <text x="540" y="255" class="label-arrow">Decides</text>
+  <text x="540" y="270" class="label-arrow">Action</text>
+  
+  <!-- Node 2: ACT (Bottom Right) -->
+  <g>
+    <ellipse cx="600" cy="380" rx="160" ry="80" fill="url(#actGradient)" class="node-act"/>
+    <text x="600" y="355" class="icon">⚡</text>
+    <text x="600" y="377" class="text-title">2. ACT</text>
+    <text x="600" y="395" class="text-content">Execute tool/action</text>
+    <line x1="480" y1="405" x2="720" y2="405" stroke="white" stroke-width="1" opacity="0.5"/>
+    <text x="600" y="422" class="text-example">Search[Book Title]</text>
+    <text x="600" y="437" class="text-example">API call to search engine</text>
+  </g>
+  
+  <!-- Arrow from ACT to OBSERVATION -->
+  <path d="M 500 440 L 320 440" class="arrow"/>
+  <text x="410" y="430" class="label-arrow">Receives</text>
+  <text x="410" y="445" class="label-arrow">Result</text>
+  
+  <!-- Node 3: OBSERVATION (Bottom Left) -->
+  <g>
+    <ellipse cx="200" cy="380" rx="160" ry="80" fill="url(#observationGradient)" class="node-observation"/>
+    <text x="200" y="355" class="icon">👁️</text>
+    <text x="200" y="377" class="text-title">3. OBSERVATION</text>
+    <text x="200" y="395" class="text-content">Data from environment</text>
+    <line x1="80" y1="405" x2="320" y2="405" stroke="white" stroke-width="1" opacity="0.5"/>
+    <text x="200" y="422" class="text-example">"Author is Carlo Rovelli"</text>
+    <text x="200" y="437" class="text-example">External data retrieved</text>
+  </g>
+  
+  <!-- Arrow from OBSERVATION back to THOUGHT -->
+  <path d="M 320 310 L 400 220" class="arrow"/>
+  <text x="350" y="255" class="label-arrow">Updates</text>
+  <text x="350" y="270" class="label-arrow">Context</text>
+  
+  <!-- Cycle Indicator (curved arrow showing the repeat) -->
+  <path d="M 560 150 Q 700 250, 670 380" class="cycle-arrow"/>
+  <text x="680" y="260" style="font-family: Arial, sans-serif; font-size: 14px; fill: #9b59b6; font-weight: bold;">REPEAT</text>
+  <text x="680" y="278" style="font-family: Arial, sans-serif; font-size: 12px; fill: #9b59b6; font-style: italic;">Until task</text>
+  <text x="680" y="293" style="font-family: Arial, sans-serif; font-size: 12px; fill: #9b59b6; font-style: italic;">complete</text>
+  
+  <!-- Example Iteration Box -->
+  <rect x="100" y="510" width="600" height="120" rx="10" fill="#ecf0f1" stroke="#3498db" stroke-width="2"/>
+  <text x="120" y="535" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #2c3e50;">📖 Example: Complete ReAct Cycle</text>
+  
+  <text x="120" y="560" style="font-family: Arial, sans-serif; font-size: 12px; fill: #3498db; font-weight: bold;">Iteration 1:</text>
+  <text x="190" y="560" style="font-family: Arial, sans-serif; font-size: 11px; fill: #34495e;">Thought → "Need book info" → Act → Search[The Order of Time] → Observe → "Carlo Rovelli, 2017"</text>
+  
+  <text x="120" y="582" style="font-family: Arial, sans-serif; font-size: 12px; fill: #3498db; font-weight: bold;">Iteration 2:</text>
+  <text x="190" y="582" style="font-family: Arial, sans-serif; font-size: 11px; fill: #34495e;">Thought → "Need more details" → Act → Search[Carlo Rovelli biography] → Observe → "Italian physicist..."</text>
+  
+  <text x="120" y="604" style="font-family: Arial, sans-serif; font-size: 12px; fill: #2ecc71; font-weight: bold;">Final:</text>
+  <text x="165" y="604" style="font-family: Arial, sans-serif; font-size: 11px; fill: #34495e;">Thought → "I have all needed info" → Act → Answer[The author is Carlo Rovelli, Italian physicist]</text>
+  
+  <text x="120" y="620" style="font-family: Arial, sans-serif; font-size: 10px; fill: #7f8c8d; font-style: italic;">✓ Task complete - cycle stops</text>
+  
+  <!-- Benefits Box -->
+  <rect x="50" y="480" width="700" height="20" rx="5" fill="#9b59b6"/>
+  <text x="400" y="495" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 12px; fill: white; font-weight: bold;">💡 Why ReAct Works: Combines internal reasoning with external tools to reduce hallucination &amp; improve accuracy</text>
+</svg>

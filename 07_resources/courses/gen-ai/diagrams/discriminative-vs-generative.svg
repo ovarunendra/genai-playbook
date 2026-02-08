@@ -1,0 +1,118 @@
+<svg width="900" height="450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="450" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-size="22" font-weight="bold" fill="#212121">Discriminative vs. Generative AI</text>
+  
+  <!-- Divider Line -->
+  <line x1="450" y1="60" x2="450" y2="430" stroke="#bdbdbd" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- LEFT SIDE: Discriminative AI -->
+  <text x="225" y="80" text-anchor="middle" font-size="18" font-weight="bold" fill="#1565c0">Discriminative AI</text>
+  <text x="225" y="410" text-anchor="middle" font-size="16" font-weight="bold" fill="#424242">CLASSIFY</text>
+  
+  <!-- Blue dots (Class 1) -->
+  <circle cx="100" cy="140" r="8" fill="#2196f3"/>
+  <circle cx="120" cy="165" r="8" fill="#2196f3"/>
+  <circle cx="90" cy="180" r="8" fill="#2196f3"/>
+  <circle cx="140" cy="150" r="8" fill="#2196f3"/>
+  <circle cx="110" cy="200" r="8" fill="#2196f3"/>
+  <circle cx="150" cy="185" r="8" fill="#2196f3"/>
+  <circle cx="130" cy="220" r="8" fill="#2196f3"/>
+  <circle cx="170" cy="175" r="8" fill="#2196f3"/>
+  <circle cx="95" cy="225" r="8" fill="#2196f3"/>
+  <circle cx="160" cy="210" r="8" fill="#2196f3"/>
+  <circle cx="125" cy="125" r="8" fill="#2196f3"/>
+  <circle cx="180" cy="200" r="8" fill="#2196f3"/>
+  <circle cx="105" cy="245" r="8" fill="#2196f3"/>
+  <circle cx="145" cy="265" r="8" fill="#2196f3"/>
+  <circle cx="165" cy="240" r="8" fill="#2196f3"/>
+  
+  <!-- Red dots (Class 2) -->
+  <circle cx="270" cy="210" r="8" fill="#f44336"/>
+  <circle cx="290" cy="180" r="8" fill="#f44336"/>
+  <circle cx="310" cy="220" r="8" fill="#f44336"/>
+  <circle cx="250" cy="245" r="8" fill="#f44336"/>
+  <circle cx="280" cy="265" r="8" fill="#f44336"/>
+  <circle cx="320" cy="250" r="8" fill="#f44336"/>
+  <circle cx="300" cy="290" r="8" fill="#f44336"/>
+  <circle cx="340" cy="280" r="8" fill="#f44336"/>
+  <circle cx="265" cy="310" r="8" fill="#f44336"/>
+  <circle cx="290" cy="330" r="8" fill="#f44336"/>
+  <circle cx="330" cy="305" r="8" fill="#f44336"/>
+  <circle cx="310" cy="345" r="8" fill="#f44336"/>
+  <circle cx="275" cy="350" r="8" fill="#f44336"/>
+  <circle cx="350" cy="320" r="8" fill="#f44336"/>
+  <circle cx="320" cy="365" r="8" fill="#f44336"/>
+  
+  <!-- Decision Boundary Line -->
+  <line x1="200" y1="120" x2="240" y2="380" stroke="#424242" stroke-width="4"/>
+  
+  <!-- Arrow and label for decision boundary -->
+  <text x="200" y="110" font-size="12" fill="#424242" font-style="italic">Decision Boundary</text>
+  
+  <!-- RIGHT SIDE: Generative AI -->
+  <text x="675" y="80" text-anchor="middle" font-size="18" font-weight="bold" fill="#2e7d32">Generative AI</text>
+  <text x="675" y="410" text-anchor="middle" font-size="16" font-weight="bold" fill="#424242">CREATE</text>
+  
+  <!-- Cloud of existing data points (purple) -->
+  <circle cx="620" cy="180" r="7" fill="#9c27b0" opacity="0.7"/>
+  <circle cx="650" cy="190" r="7" fill="#9c27b0" opacity="0.7"/>
+  <circle cx="640" cy="165" r="7" fill="#9c27b0" opacity="0.7"/>
+  <circle cx="680" cy="175" r="7" fill="#9c27b0" opacity="0.7"/>
+  <circle cx="630" cy="210" r="7" fill="#9c27b0" opacity="0.7"/>
+  <circle cx="665" cy="220" r="7" fill="#9c27b0" opacity="0.7"/>
+  <circle cx="700" cy="200" r="7" fill="#9c27b0" opacity="0.7"/>
+  <circle cx="620" cy="240" r="7" fill="#9c27b0" opacity="0.7"/>
+  <circle cx="645" cy="250" r="7" fill="#9c27b0" opacity="0.7"/>
+  <circle cx="690" cy="235" r="7" fill="#9c27b0" opacity="0.7"/>
+  <circle cx="710" cy="225" r="7" fill="#9c27b0" opacity="0.7"/>
+  <circle cx="630" cy="275" r="7" fill="#9c27b0" opacity="0.7"/>
+  <circle cx="660" cy="285" r="7" fill="#9c27b0" opacity="0.7"/>
+  <circle cx="685" cy="270" r="7" fill="#9c27b0" opacity="0.7"/>
+  <circle cx="715" cy="260" r="7" fill="#9c27b0" opacity="0.7"/>
+  <circle cx="640" cy="305" r="7" fill="#9c27b0" opacity="0.7"/>
+  <circle cx="670" cy="315" r="7" fill="#9c27b0" opacity="0.7"/>
+  <circle cx="700" cy="295" r="7" fill="#9c27b0" opacity="0.7"/>
+  <circle cx="725" cy="285" r="7" fill="#9c27b0" opacity="0.7"/>
+  <circle cx="655" cy="340" r="7" fill="#9c27b0" opacity="0.7"/>
+  <circle cx="680" cy="350" r="7" fill="#9c27b0" opacity="0.7"/>
+  <circle cx="710" cy="330" r="7" fill="#9c27b0" opacity="0.7"/>
+  <circle cx="735" cy="310" r="7" fill="#9c27b0" opacity="0.7"/>
+  <circle cx="745" cy="245" r="7" fill="#9c27b0" opacity="0.7"/>
+  <circle cx="600" cy="200" r="7" fill="#9c27b0" opacity="0.7"/>
+  <circle cx="595" cy="260" r="7" fill="#9c27b0" opacity="0.7"/>
+  <circle cx="750" cy="275" r="7" fill="#9c27b0" opacity="0.7"/>
+  
+  <!-- Data distribution cloud (ellipse) -->
+  <ellipse cx="670" cy="250" rx="90" ry="95" fill="none" stroke="#9c27b0" stroke-width="2" stroke-dasharray="5,5" opacity="0.5"/>
+  
+  <!-- New generated dot (highlighted in green with glow) -->
+  <defs>
+    <radialGradient id="glow">
+      <stop offset="0%" style="stop-color:#76ff03;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#76ff03;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Glow effect -->
+  <circle cx="670" cy="240" r="20" fill="url(#glow)"/>
+  <circle cx="670" cy="240" r="10" fill="#76ff03" stroke="#33691e" stroke-width="3"/>
+  
+  <!-- Label for new dot -->
+  <text x="620" y="145" font-size="12" fill="#33691e" font-weight="bold">New Content</text>
+  <line x1="635" y1="150" x2="665" y2="225" stroke="#33691e" stroke-width="2" marker-end="url(#arrow-green)"/>
+  
+  <defs>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#33691e"/>
+    </marker>
+  </defs>
+  
+  <!-- Legend for Generative -->
+  <circle cx="585" cy="380" r="6" fill="#9c27b0" opacity="0.7"/>
+  <text x="595" y="385" font-size="11" fill="#424242">Training Data</text>
+  <circle cx="700" cy="380" r="8" fill="#76ff03" stroke="#33691e" stroke-width="2"/>
+  <text x="712" y="385" font-size="11" fill="#424242">Generated</text>
+</svg>

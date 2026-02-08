@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 750">
+  <defs>
+    <style>
+      .main-title { font-family: Arial, sans-serif; font-size: 28px; font-weight: bold; fill: #2c3e50; }
+      .card-title { font-family: Arial, sans-serif; font-size: 18px; fill: white; font-weight: bold; }
+      .card-acronym { font-family: Arial, sans-serif; font-size: 14px; fill: white; font-weight: bold; letter-spacing: 1px; }
+      .card-text { font-family: Arial, sans-serif; font-size: 11px; fill: white; }
+      .card-label { font-family: Arial, sans-serif; font-size: 10px; fill: white; font-weight: bold; text-transform: uppercase; }
+      .example-text { font-family: 'Courier New', monospace; font-size: 10px; fill: white; }
+    </style>
+    <linearGradient id="moeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="lrmGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#9b59b6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8e44ad;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="vlmGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e67e22;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d35400;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="slmGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2ecc71;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#27ae60;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Title -->
+  <text x="550" y="40" text-anchor="middle" class="main-title">The Model Zoo</text>
+  <text x="550" y="65" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; fill: #7f8c8d; font-style: italic;">Different "species" of AI models optimized for specific tasks</text>
+  
+  <!-- Card 1: MoE (Top Left) -->
+  <g>
+    <rect x="50" y="100" width="500" height="280" rx="12" fill="url(#moeGradient)" stroke="#2471a3" stroke-width="4"/>
+    
+    <!-- Icon -->
+    <circle cx="120" cy="160" r="40" fill="#2980b9" opacity="0.5"/>
+    <text x="120" y="175" text-anchor="middle" style="font-size: 50px;">🧩</text>
+    
+    <!-- Header -->
+    <text x="200" y="145" class="card-acronym">MoE</text>
+    <text x="200" y="168" class="card-title">Mixture of Experts</text>
+    <line x1="200" y1="175" x2="520" y2="175" stroke="white" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Content -->
+    <text x="70" y="205" class="card-label">💡 Concept:</text>
+    <text x="70" y="223" class="card-text">Multiple "expert" sub-networks (math expert, coding expert, etc.)</text>
+    <text x="70" y="238" class="card-text">A Gating Network routes input to only relevant experts</text>
+    
+    <text x="70" y="265" class="card-label">⚙️ Mechanism:</text>
+    <text x="70" y="283" class="card-text">Input → Gating Network → Select Experts → Combine Results</text>
+    
+    <text x="70" y="310" class="card-label">✅ Pros:</text>
+    <text x="70" y="328" class="card-text">Huge knowledge base but cheap to run (only activates needed experts)</text>
+    
+    <!-- Examples -->
+    <rect x="70" y="345" width="460" height="25" rx="6" fill="#2471a3" opacity="0.6"/>
+    <text x="300" y="362" text-anchor="middle" class="example-text">Examples: Mistral 8x7B, DeepSeek V3, GPT-4 (rumored)</text>
+  </g>
+  
+  <!-- Card 2: LRM (Top Right) -->
+  <g>
+    <rect x="570" y="100" width="500" height="280" rx="12" fill="url(#lrmGradient)" stroke="#6c3483" stroke-width="4"/>
+    
+    <!-- Icon -->
+    <circle cx="640" cy="160" r="40" fill="#8e44ad" opacity="0.5"/>
+    <text x="640" y="175" text-anchor="middle" style="font-size: 50px;">🧠</text>
+    
+    <!-- Header -->
+    <text x="720" y="145" class="card-acronym">LRM</text>
+    <text x="720" y="168" class="card-title">Large Reasoning Models</text>
+    <line x1="720" y1="175" x2="1040" y2="175" stroke="white" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Content -->
+    <text x="590" y="205" class="card-label">💡 Concept:</text>
+    <text x="590" y="223" class="card-text">Models designed to "think" before they speak</text>
+    <text x="590" y="238" class="card-text">Use internal Chain-of-Thought processing</text>
+    
+    <text x="590" y="265" class="card-label">🎯 Use Case:</text>
+    <text x="590" y="283" class="card-text">Complex math, logic puzzles, strategic planning, scientific reasoning</text>
+    
+    <text x="590" y="310" class="card-label">⚖️ Trade-off:</text>
+    <text x="590" y="328" class="card-text">Slower and more expensive, but significantly higher accuracy</text>
+    
+    <!-- Examples -->
+    <rect x="590" y="345" width="460" height="25" rx="6" fill="#6c3483" opacity="0.6"/>
+    <text x="820" y="362" text-anchor="middle" class="example-text">Examples: OpenAI o1, DeepSeek R1, Claude 3.5 Sonnet (extended thinking)</text>
+  </g>
+  
+  <!-- Card 3: VLM (Bottom Left) -->
+  <g>
+    <rect x="50" y="400" width="500" height="280" rx="12" fill="url(#vlmGradient)" stroke="#a04000" stroke-width="4"/>
+    
+    <!-- Icon -->
+    <circle cx="120" cy="460" r="40" fill="#d35400" opacity="0.5"/>
+    <text x="120" y="475" text-anchor="middle" style="font-size: 50px;">👁️</text>
+    
+    <!-- Header -->
+    <text x="200" y="445" class="card-acronym">VLM</text>
+    <text x="200" y="468" class="card-title">Vision Language Models</text>
+    <line x1="200" y1="475" x2="520" y2="475" stroke="white" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Content -->
+    <text x="70" y="505" class="card-label">💡 Concept:</text>
+    <text x="70" y="523" class="card-text">Models that can "see" - process text and images jointly</text>
+    <text x="70" y="538" class="card-text">Unified embedding space for vision and language</text>
+    
+    <text x="70" y="565" class="card-label">🎯 Use Case:</text>
+    <text x="70" y="583" class="card-text">Analyzing charts, reading screenshots, OCR, robotics, medical imaging</text>
+    
+    <text x="70" y="610" class="card-label">🔍 Capability:</text>
+    <text x="70" y="628" class="card-text">Understand visual context and answer questions about images</text>
+    
+    <!-- Examples -->
+    <rect x="70" y="645" width="460" height="25" rx="6" fill="#a04000" opacity="0.6"/>
+    <text x="300" y="662" text-anchor="middle" class="example-text">Examples: GPT-4o, Claude 3.5 Sonnet, Gemini Pro Vision, Qwen2.5-VL</text>
+  </g>
+  
+  <!-- Card 4: SLM (Bottom Right) -->
+  <g>
+    <rect x="570" y="400" width="500" height="280" rx="12" fill="url(#slmGradient)" stroke="#1e8449" stroke-width="4"/>
+    
+    <!-- Icon -->
+    <circle cx="640" cy="460" r="40" fill="#27ae60" opacity="0.5"/>
+    <text x="640" y="475" text-anchor="middle" style="font-size: 50px;">📱</text>
+    
+    <!-- Header -->
+    <text x="720" y="445" class="card-acronym">SLM</text>
+    <text x="720" y="468" class="card-title">Small Language Models</text>
+    <line x1="720" y1="475" x2="1040" y2="475" stroke="white" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Content -->
+    <text x="590" y="505" class="card-label">💡 Concept:</text>
+    <text x="590" y="523" class="card-text">Tiny models (1-7B parameters) that run locally on devices</text>
+    <text x="590" y="538" class="card-text">Optimized for efficiency and edge deployment</text>
+    
+    <text x="590" y="565" class="card-label">🎯 Use Case:</text>
+    <text x="590" y="583" class="card-text">Privacy-first apps, IoT devices, edge computing, mobile applications</text>
+    
+    <text x="590" y="610" class="card-label">✨ Benefits:</text>
+    <text x="590" y="628" class="card-text">No cloud dependency, fast inference, low cost, data stays local</text>
+    
+    <!-- Examples -->
+    <rect x="590" y="645" width="460" height="25" rx="6" fill="#1e8449" opacity="0.6"/>
+    <text x="820" y="662" text-anchor="middle" class="example-text">Examples: Gemma, Phi-2/3, Llama 3.2 1B/3B, Qwen 2.5 0.5B-7B</text>
+  </g>
+  
+  <!-- Bottom note -->
+  <rect x="50" y="695" width="1000" height="45" rx="8" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="2"/>
+  <text x="550" y="715" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 13px; fill: #2c3e50; font-weight: bold;">🎯 Selection Guide: Choose based on your constraints</text>
+  <text x="550" y="732" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: #7f8c8d;">Cost-efficient? → MoE | Maximum accuracy? → LRM | Need vision? → VLM | Privacy/Edge? → SLM</text>
+</svg>

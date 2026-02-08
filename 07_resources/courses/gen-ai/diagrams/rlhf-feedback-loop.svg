@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700">
+  <defs>
+    <style>
+      .main-title { font-family: Arial, sans-serif; font-size: 26px; font-weight: bold; fill: #2c3e50; }
+      .step-number { font-family: Arial, sans-serif; font-size: 18px; fill: white; font-weight: bold; }
+      .step-title { font-family: Arial, sans-serif; font-size: 16px; fill: white; font-weight: bold; }
+      .step-detail { font-family: Arial, sans-serif; font-size: 11px; fill: white; }
+      .code-text { font-family: 'Courier New', monospace; font-size: 10px; fill: white; }
+      .center-text { font-family: Arial, sans-serif; font-size: 16px; fill: #2c3e50; font-weight: bold; }
+    </style>
+    <marker id="arrowhead" markerWidth="14" markerHeight="14" refX="12" refY="5" orient="auto">
+      <polygon points="0 0, 14 5, 0 10" fill="#34495e"/>
+    </marker>
+    <linearGradient id="step1Gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="step2Gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f39c12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e67e22;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="step3Gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#9b59b6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8e44ad;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="step4Gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2ecc71;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#27ae60;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" class="main-title">The RLHF Feedback Loop</text>
+  <text x="450" y="58" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; fill: #7f8c8d; font-style: italic;">Aligning AI models with human preferences through iterative feedback</text>
+  
+  <!-- Center circle -->
+  <circle cx="450" cy="380" r="80" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="3"/>
+  <text x="450" y="370" text-anchor="middle" class="center-text">RLHF</text>
+  <text x="450" y="390" text-anchor="middle" class="center-text">Cycle</text>
+  <text x="450" y="408" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 12px; fill: #7f8c8d;">Continuous</text>
+  <text x="450" y="423" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 12px; fill: #7f8c8d;">Improvement</text>
+  
+  <!-- Step 1: Generate (Top) -->
+  <g>
+    <rect x="280" y="100" width="340" height="140" rx="12" fill="url(#step1Gradient)" stroke="#2471a3" stroke-width="4"/>
+    
+    <circle cx="320" cy="135" r="22" fill="#2980b9" stroke="#1f618d" stroke-width="2"/>
+    <text x="320" y="143" text-anchor="middle" class="step-number">1</text>
+    
+    <text x="450" y="135" text-anchor="middle" class="step-title">🤖 GENERATE</text>
+    <line x1="300" y1="145" x2="600" y2="145" stroke="white" stroke-width="1" opacity="0.5"/>
+    
+    <text x="450" y="165" text-anchor="middle" class="step-detail">Model produces multiple responses for one prompt</text>
+    
+    <!-- Example responses -->
+    <rect x="300" y="180" width="280" height="50" rx="6" fill="#2471a3" opacity="0.6"/>
+    <text x="440" y="195" text-anchor="middle" class="code-text">Prompt: "Explain gravity"</text>
+    <line x1="310" y1="202" x2="570" y2="202" stroke="white" stroke-width="0.5" opacity="0.5"/>
+    <text x="440" y="213" text-anchor="middle" class="code-text">Response A | Response B | Response C</text>
+    <text x="440" y="225" text-anchor="middle" style="font-size: 9px; fill: #ecf0f1; font-style: italic;">Multiple candidate answers generated</text>
+  </g>
+  
+  <!-- Arrow 1 to 2 (curved right) -->
+  <path d="M 620 170 Q 720 220, 680 300" stroke="#34495e" stroke-width="5" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 2: Rank (Right) -->
+  <g>
+    <rect x="640" y="320" width="240" height="160" rx="12" fill="url(#step2Gradient)" stroke="#d68910" stroke-width="4"/>
+    
+    <circle cx="680" cy="360" r="22" fill="#e67e22" stroke="#ca6f1e" stroke-width="2"/>
+    <text x="680" y="368" text-anchor="middle" class="step-number">2</text>
+    
+    <text x="760" y="360" text-anchor="middle" class="step-title">👥 RANK</text>
+    <line x1="660" y1="370" x2="860" y2="370" stroke="white" stroke-width="1" opacity="0.5"/>
+    
+    <text x="760" y="390" text-anchor="middle" class="step-detail">Human labeler ranks responses by</text>
+    <text x="760" y="404" text-anchor="middle" class="step-detail">helpfulness, safety, and accuracy</text>
+    
+    <!-- Ranking visualization -->
+    <rect x="660" y="420" width="200" height="50" rx="6" fill="#d68910" opacity="0.6"/>
+    <text x="760" y="436" text-anchor="middle" class="code-text">Human judges:</text>
+    <text x="760" y="450" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 13px; fill: white; font-weight: bold;">A &gt; C &gt; B</text>
+    <text x="760" y="464" text-anchor="middle" style="font-size: 9px; fill: #ecf0f1; font-style: italic;">Best → Worst</text>
+  </g>
+  
+  <!-- Arrow 2 to 3 (curved down) -->
+  <path d="M 680 485 Q 620 560, 520 590" stroke="#34495e" stroke-width="5" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 3: Reward Model (Bottom) -->
+  <g>
+    <rect x="280" y="580" width="340" height="100" rx="12" fill="url(#step3Gradient)" stroke="#6c3483" stroke-width="4"/>
+    
+    <circle cx="320" cy="615" r="22" fill="#8e44ad" stroke="#6c3483" stroke-width="2"/>
+    <text x="320" y="623" text-anchor="middle" class="step-number">3</text>
+    
+    <text x="450" y="615" text-anchor="middle" class="step-title">🎯 REWARD MODEL (RM)</text>
+    <line x1="300" y1="625" x2="600" y2="625" stroke="white" stroke-width="1" opacity="0.5"/>
+    
+    <text x="450" y="645" text-anchor="middle" class="step-detail">Separate AI learns to predict human preferences</text>
+    <text x="450" y="660" text-anchor="middle" class="step-detail">Automates scoring: Score(Response A) = 8.5/10</text>
+    <text x="450" y="672" text-anchor="middle" style="font-size: 9px; fill: #ecf0f1; font-style: italic;">Learns pattern: "This type of answer gets high scores"</text>
+  </g>
+  
+  <!-- Arrow 3 to 4 (curved left) -->
+  <path d="M 280 630 Q 180 580, 220 480" stroke="#34495e" stroke-width="5" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 4: Optimize (Left) -->
+  <g>
+    <rect x="20" y="320" width="240" height="160" rx="12" fill="url(#step4Gradient)" stroke="#1e8449" stroke-width="4"/>
+    
+    <circle cx="60" cy="360" r="22" fill="#27ae60" stroke="#1e8449" stroke-width="2"/>
+    <text x="60" y="368" text-anchor="middle" class="step-number">4</text>
+    
+    <text x="140" y="360" text-anchor="middle" class="step-title">⚡ OPTIMIZE (PPO)</text>
+    <line x1="40" y1="370" x2="240" y2="370" stroke="white" stroke-width="1" opacity="0.5"/>
+    
+    <text x="140" y="390" text-anchor="middle" class="step-detail">Update LLM to maximize scores</text>
+    <text x="140" y="404" text-anchor="middle" class="step-detail">using Proximal Policy</text>
+    <text x="140" y="418" text-anchor="middle" class="step-detail">Optimization (PPO)</text>
+    
+    <!-- Algorithm box -->
+    <rect x="40" y="435" width="200" height="35" rx="6" fill="#1e8449" opacity="0.6"/>
+    <text x="140" y="450" text-anchor="middle" class="code-text">Model learns:</text>
+    <text x="140" y="463" text-anchor="middle" style="font-size: 11px; fill: white; font-weight: bold;">"Generate more A-like responses"</text>
+  </g>
+  
+  <!-- Arrow 4 to 1 (curved up) -->
+  <path d="M 220 320 Q 180 220, 280 170" stroke="#34495e" stroke-width="5" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Bottom explanation -->
+  <rect x="50" y="690" width="800" height="5" rx="2" fill="#e74c3c"/>
+  <text x="450" y="688" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: #e74c3c; font-weight: bold;">↻ The cycle repeats thousands of times, progressively aligning the model with human values</text>
+</svg>

@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500">
+  <defs>
+    <style>
+      .main-title { font-family: Arial, sans-serif; font-size: 26px; font-weight: bold; fill: #2c3e50; }
+      .box-title { font-family: Arial, sans-serif; font-size: 15px; fill: white; font-weight: bold; }
+      .box-content { font-family: Arial, sans-serif; font-size: 11px; fill: white; }
+      .arrow { stroke: #34495e; stroke-width: 4; fill: none; marker-end: url(#arrowhead); }
+      .label-text { font-family: Arial, sans-serif; font-size: 12px; fill: #2c3e50; font-weight: bold; }
+    </style>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#34495e"/>
+    </marker>
+    <linearGradient id="userGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5dade2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3498db;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="inputGuardGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c0392b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="llmGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#af7ac5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9b59b6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="outputGuardGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e67e22;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d35400;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="finalGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#52be80;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2ecc71;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Title -->
+  <text x="500" y="35" text-anchor="middle" class="main-title">The Safety Sandwich</text>
+  <text x="500" y="58" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; fill: #7f8c8d; font-style: italic;">Two layers of defense protecting your LLM</text>
+  
+  <!-- Layer 1: Input Flow -->
+  <g>
+    <text x="50" y="120" class="label-text">LAYER 1: Input Protection</text>
+    
+    <!-- User Input -->
+    <rect x="50" y="140" width="140" height="100" rx="10" fill="url(#userGradient)" stroke="#2980b9" stroke-width="3"/>
+    <text x="120" y="165" text-anchor="middle" class="box-title">👤 User Input</text>
+    <line x1="70" y1="175" x2="170" y2="175" stroke="white" stroke-width="1" opacity="0.5"/>
+    <text x="120" y="195" text-anchor="middle" class="box-content">"Tell me how to</text>
+    <text x="120" y="210" text-anchor="middle" class="box-content">hack a system"</text>
+    <text x="120" y="228" text-anchor="middle" style="font-size: 10px; fill: #ecf0f1; font-style: italic;">Untrusted</text>
+    
+    <!-- Arrow 1 -->
+    <path d="M 195 190 L 245 190" class="arrow"/>
+    
+    <!-- Input Guardrail -->
+    <rect x="250" y="140" width="160" height="100" rx="10" fill="url(#inputGuardGradient)" stroke="#a93226" stroke-width="3"/>
+    <text x="330" y="165" text-anchor="middle" class="box-title">🛑 Input Guardrail</text>
+    <line x1="270" y1="175" x2="390" y2="175" stroke="white" stroke-width="1" opacity="0.5"/>
+    <text x="330" y="192" text-anchor="middle" class="box-content">✓ Filters PII</text>
+    <text x="330" y="207" text-anchor="middle" class="box-content">✓ Blocks Profanity</text>
+    <text x="330" y="222" text-anchor="middle" class="box-content">✓ Detects Jailbreaks</text>
+    
+    <!-- Arrow 2 -->
+    <path d="M 415 190 L 465 190" class="arrow"/>
+    
+    <!-- LLM Processing -->
+    <rect x="470" y="140" width="140" height="100" rx="10" fill="url(#llmGradient)" stroke="#7d3c98" stroke-width="3"/>
+    <text x="540" y="165" text-anchor="middle" class="box-title">🤖 LLM</text>
+    <text x="540" y="180" text-anchor="middle" class="box-title">Processing</text>
+    <line x1="490" y1="190" x2="590" y2="190" stroke="white" stroke-width="1" opacity="0.5"/>
+    <text x="540" y="210" text-anchor="middle" class="box-content">Generates</text>
+    <text x="540" y="225" text-anchor="middle" class="box-content">response</text>
+  </g>
+  
+  <!-- Layer 2: Output Flow -->
+  <g>
+    <text x="50" y="290" class="label-text">LAYER 2: Output Protection</text>
+    
+    <!-- LLM Output (continuation) -->
+    <rect x="470" y="310" width="140" height="100" rx="10" fill="url(#llmGradient)" stroke="#7d3c98" stroke-width="3"/>
+    <text x="540" y="335" text-anchor="middle" class="box-title">📤 LLM Output</text>
+    <line x1="490" y1="345" x2="590" y2="345" stroke="white" stroke-width="1" opacity="0.5"/>
+    <text x="540" y="365" text-anchor="middle" class="box-content">"Check out our</text>
+    <text x="540" y="380" text-anchor="middle" class="box-content">competitor Amazon"</text>
+    <text x="540" y="398" text-anchor="middle" style="font-size: 10px; fill: #ecf0f1; font-style: italic;">Unfiltered</text>
+    
+    <!-- Arrow 3 -->
+    <path d="M 615 360 L 665 360" class="arrow"/>
+    
+    <!-- Output Guardrail -->
+    <rect x="670" y="310" width="160" height="100" rx="10" fill="url(#outputGuardGradient)" stroke="#ba4a00" stroke-width="3"/>
+    <text x="750" y="335" text-anchor="middle" class="box-title">🛑 Output Guardrail</text>
+    <line x1="690" y1="345" x2="810" y2="345" stroke="white" stroke-width="1" opacity="0.5"/>
+    <text x="750" y="362" text-anchor="middle" class="box-content">✓ Redacts Brands</text>
+    <text x="750" y="377" text-anchor="middle" class="box-content">✓ Removes PII</text>
+    <text x="750" y="392" text-anchor="middle" class="box-content">✓ Filters Toxicity</text>
+    
+    <!-- Arrow 4 -->
+    <path d="M 835 360 L 885 360" class="arrow"/>
+    
+    <!-- Final Response -->
+    <rect x="890" y="310" width="90" height="100" rx="10" fill="url(#finalGradient)" stroke="#239b56" stroke-width="3"/>
+    <text x="935" y="335" text-anchor="middle" class="box-title">✅ Safe</text>
+    <text x="935" y="350" text-anchor="middle" class="box-title">Response</text>
+    <line x1="900" y1="360" x2="970" y2="360" stroke="white" stroke-width="1" opacity="0.5"/>
+    <text x="935" y="380" text-anchor="middle" class="box-content">"Check out</text>
+    <text x="935" y="395" text-anchor="middle" class="box-content">our service"</text>
+  </g>
+  
+  <!-- Connecting line between layers -->
+  <path d="M 540 245 L 540 305" stroke="#7d3c98" stroke-width="4" stroke-dasharray="8,4" marker-end="url(#arrowhead)"/>
+  
+  <!-- Info boxes -->
+  <g>
+    <!-- Input Defense Box -->
+    <rect x="50" y="430" width="440" height="50" rx="8" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="2"/>
+    <text x="270" y="450" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 13px; fill: #2c3e50; font-weight: bold;">Input Defense: Protects LLM from malicious prompts</text>
+    <text x="270" y="468" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: #7f8c8d;">Prevents jailbreaks, prompt injection, PII leaks before processing</text>
+    
+    <!-- Output Defense Box -->
+    <rect x="510" y="430" width="470" height="50" rx="8" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="2"/>
+    <text x="745" y="450" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 13px; fill: #2c3e50; font-weight: bold;">Output Defense: Protects users from unsafe responses</text>
+    <text x="745" y="468" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: #7f8c8d;">Sanitizes brand risks, toxic content, sensitive data before delivery</text>
+  </g>
+</svg>

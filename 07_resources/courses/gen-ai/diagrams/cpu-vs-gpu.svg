@@ -1,0 +1,122 @@
+<svg width="900" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="400" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-size="22" font-weight="bold" fill="#212121">CPU vs. GPU Architecture</text>
+  
+  <!-- Divider Line -->
+  <line x1="450" y1="60" x2="450" y2="380" stroke="#bdbdbd" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- LEFT SIDE: CPU -->
+  <text x="225" y="80" text-anchor="middle" font-size="20" font-weight="bold" fill="#1976d2">CPU</text>
+  <text x="225" y="105" text-anchor="middle" font-size="14" fill="#666">(Central Processing Unit)</text>
+  
+  <!-- CPU Container -->
+  <rect x="75" y="130" width="300" height="200" fill="#e3f2fd" stroke="#1565c0" stroke-width="3" rx="8"/>
+  
+  <!-- CPU Cores (4 large cores) -->
+  <rect x="95" y="150" width="120" height="80" fill="#2196f3" stroke="#0d47a1" stroke-width="3" rx="4"/>
+  <text x="155" y="195" text-anchor="middle" font-size="16" font-weight="bold" fill="white">Core 1</text>
+  
+  <rect x="235" y="150" width="120" height="80" fill="#2196f3" stroke="#0d47a1" stroke-width="3" rx="4"/>
+  <text x="295" y="195" text-anchor="middle" font-size="16" font-weight="bold" fill="white">Core 2</text>
+  
+  <rect x="95" y="240" width="120" height="80" fill="#2196f3" stroke="#0d47a1" stroke-width="3" rx="4"/>
+  <text x="155" y="285" text-anchor="middle" font-size="16" font-weight="bold" fill="white">Core 3</text>
+  
+  <rect x="235" y="240" width="120" height="80" fill="#2196f3" stroke="#0d47a1" stroke-width="3" rx="4"/>
+  <text x="295" y="285" text-anchor="middle" font-size="16" font-weight="bold" fill="white">Core 4</text>
+  
+  <!-- CPU Label -->
+  <text x="225" y="355" text-anchor="middle" font-size="14" font-weight="bold" fill="#0d47a1">Few Powerful Cores</text>
+  <text x="225" y="375" text-anchor="middle" font-size="12" fill="#424242">Complex, sequential tasks</text>
+  
+  <!-- RIGHT SIDE: GPU -->
+  <text x="675" y="80" text-anchor="middle" font-size="20" font-weight="bold" fill="#2e7d32">GPU</text>
+  <text x="675" y="105" text-anchor="middle" font-size="14" fill="#666">(Graphics Processing Unit)</text>
+  
+  <!-- GPU Container -->
+  <rect x="525" y="130" width="300" height="200" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" rx="8"/>
+  
+  <!-- GPU Cores (many small cores - showing a grid of tiny cores) -->
+  <!-- Row 1 -->
+  <rect x="535" y="140" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="551" y="140" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="567" y="140" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="583" y="140" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="599" y="140" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="615" y="140" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="631" y="140" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="647" y="140" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="663" y="140" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="679" y="140" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="695" y="140" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="711" y="140" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="727" y="140" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="743" y="140" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="759" y="140" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="775" y="140" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="791" y="140" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="807" y="140" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  
+  <!-- Row 2 -->
+  <rect x="535" y="156" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="551" y="156" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="567" y="156" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="583" y="156" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="599" y="156" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="615" y="156" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="631" y="156" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="647" y="156" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="663" y="156" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="679" y="156" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="695" y="156" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="711" y="156" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="727" y="156" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="743" y="156" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="759" y="156" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="775" y="156" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="791" y="156" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  <rect x="807" y="156" width="14" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  
+  <!-- Continue pattern for more rows (rows 3-12) -->
+  <g opacity="1">
+    <rect x="535" y="172" width="286" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+    <rect x="535" y="188" width="286" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+    <rect x="535" y="204" width="286" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+    <rect x="535" y="220" width="286" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+    <rect x="535" y="236" width="286" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+    <rect x="535" y="252" width="286" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+    <rect x="535" y="268" width="286" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+    <rect x="535" y="284" width="286" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+    <rect x="535" y="300" width="286" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+    <rect x="535" y="316" width="286" height="14" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/>
+  </g>
+  
+  <!-- Grid lines to show individual cores -->
+  <g stroke="#1b5e20" stroke-width="1" opacity="0.8">
+    <!-- Vertical lines -->
+    <line x1="551" y1="172" x2="551" y2="330"/>
+    <line x1="567" y1="172" x2="567" y2="330"/>
+    <line x1="583" y1="172" x2="583" y2="330"/>
+    <line x1="599" y1="172" x2="599" y2="330"/>
+    <line x1="615" y1="172" x2="615" y2="330"/>
+    <line x1="631" y1="172" x2="631" y2="330"/>
+    <line x1="647" y1="172" x2="647" y2="330"/>
+    <line x1="663" y1="172" x2="663" y2="330"/>
+    <line x1="679" y1="172" x2="679" y2="330"/>
+    <line x1="695" y1="172" x2="695" y2="330"/>
+    <line x1="711" y1="172" x2="711" y2="330"/>
+    <line x1="727" y1="172" x2="727" y2="330"/>
+    <line x1="743" y1="172" x2="743" y2="330"/>
+    <line x1="759" y1="172" x2="759" y2="330"/>
+    <line x1="775" y1="172" x2="775" y2="330"/>
+    <line x1="791" y1="172" x2="791" y2="330"/>
+    <line x1="807" y1="172" x2="807" y2="330"/>
+  </g>
+  
+  <!-- GPU Label -->
+  <text x="675" y="355" text-anchor="middle" font-size="14" font-weight="bold" fill="#1b5e20">Thousands of Smaller Cores</text>
+  <text x="675" y="375" text-anchor="middle" font-size="12" fill="#424242">Massive parallel arithmetic</text>
+</svg>

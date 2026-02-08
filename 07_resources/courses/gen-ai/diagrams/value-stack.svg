@@ -1,0 +1,102 @@
+<svg width="700" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="700" height="600" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="350" y="35" text-anchor="middle" font-size="24" font-weight="bold" fill="#212121">AI Application Value Stack</text>
+  <text x="350" y="58" text-anchor="middle" font-size="14" fill="#666">From Foundation to Business Value</text>
+  
+  <!-- Arrow pointing up (value increases) -->
+  <defs>
+    <marker id="arrowhead-value" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <polygon points="0 0, 12 6, 0 12" fill="#4caf50"/>
+    </marker>
+  </defs>
+  
+  <line x1="80" y1="520" x2="80" y2="120" stroke="#4caf50" stroke-width="4" marker-end="url(#arrowhead-value)"/>
+  <text x="65" y="320" text-anchor="middle" font-size="14" font-weight="bold" fill="#4caf50" transform="rotate(-90 65 320)">Value Added</text>
+  
+  <!-- Layer 1: Foundation Model (Bottom - Largest) -->
+  <g id="layer1">
+    <rect x="120" y="420" width="500" height="140" fill="#e3f2fd" rx="10" stroke="#1976d2" stroke-width="4"/>
+    
+    <!-- Layer number -->
+    <circle cx="160" cy="445" r="20" fill="#1976d2"/>
+    <text x="160" y="452" text-anchor="middle" font-size="16" font-weight="bold" fill="white">1</text>
+    
+    <!-- Title -->
+    <text x="360" y="455" text-anchor="middle" font-size="20" font-weight="bold" fill="#1976d2">Foundation Model</text>
+    
+    <!-- Content boxes -->
+    <rect x="200" y="475" width="140" height="60" fill="#bbdefb" rx="8" stroke="#1976d2" stroke-width="2"/>
+    <text x="270" y="495" text-anchor="middle" font-size="14" fill="#0d47a1">💬 Text</text>
+    <text x="270" y="515" text-anchor="middle" font-size="11" fill="#424242">(GPT, Claude, Llama)</text>
+    
+    <rect x="360" y="475" width="140" height="60" fill="#bbdefb" rx="8" stroke="#1976d2" stroke-width="2"/>
+    <text x="430" y="495" text-anchor="middle" font-size="14" fill="#0d47a1">🎨 Image</text>
+    <text x="430" y="515" text-anchor="middle" font-size="11" fill="#424242">(DALL-E, Stable Diff)</text>
+    
+    <rect x="520" y="475" width="80" height="60" fill="#bbdefb" rx="8" stroke="#1976d2" stroke-width="2"/>
+    <text x="560" y="495" text-anchor="middle" font-size="14" fill="#0d47a1">🎥 Video</text>
+    <text x="560" y="515" text-anchor="middle" font-size="11" fill="#424242">(Sora)</text>
+  </g>
+  
+  <!-- Layer 2: Differentiation (Middle) -->
+  <g id="layer2">
+    <rect x="150" y="260" width="440" height="140" fill="#fff3e0" rx="10" stroke="#f57c00" stroke-width="4"/>
+    
+    <!-- Layer number -->
+    <circle cx="190" cy="285" r="20" fill="#f57c00"/>
+    <text x="190" y="292" text-anchor="middle" font-size="16" font-weight="bold" fill="white">2</text>
+    
+    <!-- Title -->
+    <text x="370" y="295" text-anchor="middle" font-size="20" font-weight="bold" fill="#f57c00">Differentiation</text>
+    
+    <!-- Content boxes -->
+    <rect x="220" y="315" width="120" height="60" fill="#ffe0b2" rx="8" stroke="#f57c00" stroke-width="2"/>
+    <text x="280" y="337" text-anchor="middle" font-size="13" font-weight="600" fill="#e65100">UX Design</text>
+    <text x="280" y="355" text-anchor="middle" font-size="10" fill="#424242">Chat, Voice,</text>
+    <text x="280" y="368" text-anchor="middle" font-size="10" fill="#424242">Workflows</text>
+    
+    <rect x="360" y="315" width="120" height="60" fill="#ffe0b2" rx="8" stroke="#f57c00" stroke-width="2"/>
+    <text x="420" y="337" text-anchor="middle" font-size="13" font-weight="600" fill="#e65100">Integrations</text>
+    <text x="420" y="355" text-anchor="middle" font-size="10" fill="#424242">APIs, Tools,</text>
+    <text x="420" y="368" text-anchor="middle" font-size="10" fill="#424242">Data Sources</text>
+    
+    <rect x="500" y="315" width="70" height="60" fill="#ffe0b2" rx="8" stroke="#f57c00" stroke-width="2"/>
+    <text x="535" y="337" text-anchor="middle" font-size="13" font-weight="600" fill="#e65100">Domain</text>
+    <text x="535" y="350" text-anchor="middle" font-size="13" font-weight="600" fill="#e65100">Data</text>
+    <text x="535" y="368" text-anchor="middle" font-size="10" fill="#424242">RAG</text>
+  </g>
+  
+  <!-- Layer 3: User Solution (Top - Smallest) -->
+  <g id="layer3">
+    <rect x="180" y="100" width="380" height="140" fill="#e8f5e9" rx="10" stroke="#4caf50" stroke-width="4"/>
+    
+    <!-- Layer number -->
+    <circle cx="220" cy="125" r="20" fill="#4caf50"/>
+    <text x="220" y="132" text-anchor="middle" font-size="16" font-weight="bold" fill="white">3</text>
+    
+    <!-- Title -->
+    <text x="370" y="135" text-anchor="middle" font-size="20" font-weight="bold" fill="#4caf50">User Solution</text>
+    
+    <!-- Content boxes -->
+    <rect x="240" y="155" width="100" height="60" fill="#c8e6c9" rx="8" stroke="#4caf50" stroke-width="2"/>
+    <text x="290" y="177" text-anchor="middle" font-size="13" font-weight="600" fill="#2e7d32">Marketing</text>
+    <text x="290" y="193" text-anchor="middle" font-size="10" fill="#424242">Copy Gen,</text>
+    <text x="290" y="206" text-anchor="middle" font-size="10" fill="#424242">Campaigns</text>
+    
+    <rect x="360" y="155" width="100" height="60" fill="#c8e6c9" rx="8" stroke="#4caf50" stroke-width="2"/>
+    <text x="410" y="177" text-anchor="middle" font-size="13" font-weight="600" fill="#2e7d32">Support</text>
+    <text x="410" y="193" text-anchor="middle" font-size="10" fill="#424242">Chatbots,</text>
+    <text x="410" y="206" text-anchor="middle" font-size="10" fill="#424242">Agents</text>
+    
+    <rect x="480" y="155" width="60" height="60" fill="#c8e6c9" rx="8" stroke="#4caf50" stroke-width="2"/>
+    <text x="510" y="177" text-anchor="middle" font-size="13" font-weight="600" fill="#2e7d32">Coding</text>
+    <text x="510" y="193" text-anchor="middle" font-size="10" fill="#424242">Copilot</text>
+    <text x="510" y="206" text-anchor="middle" font-size="10" fill="#424242">IDEs</text>
+  </g>
+  
+  <!-- Bottom note -->
+  <text x="350" y="585" text-anchor="middle" font-size="12" font-style="italic" fill="#757575">Value increases as you move up the stack through specialization</text>
+</svg>

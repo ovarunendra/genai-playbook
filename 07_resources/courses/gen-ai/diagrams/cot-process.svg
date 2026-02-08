@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .box { stroke: #2c3e50; stroke-width: 2; }
+      .input-box { fill: #3498db; }
+      .reasoning-box { fill: #f39c12; }
+      .answer-box { fill: #2ecc71; }
+      .error-box { fill: #e74c3c; }
+      .text-white { font-family: Arial, sans-serif; font-size: 14px; fill: white; font-weight: 500; }
+      .text-title { font-family: Arial, sans-serif; font-size: 16px; fill: white; font-weight: bold; }
+      .text-label { font-family: Arial, sans-serif; font-size: 12px; fill: #7f8c8d; }
+      .main-title { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #2c3e50; }
+      .section-title { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #2c3e50; }
+      .arrow { stroke: #2c3e50; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+      .arrow-cot { stroke: #27ae60; stroke-width: 3; fill: none; marker-end: url(#arrowhead-green); }
+      .badge { font-family: Arial, sans-serif; font-size: 11px; fill: white; font-weight: bold; }
+      .warning { fill: #e74c3c; }
+      .success { fill: #2ecc71; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2c3e50"/>
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#27ae60"/>
+    </marker>
+  </defs>
+  
+  <!-- Main Title -->
+  <text x="400" y="30" text-anchor="middle" class="main-title">Chain of Thought (CoT) Process Comparison</text>
+  
+  <!-- Standard Prompting Section -->
+  <g>
+    <text x="400" y="70" text-anchor="middle" class="section-title">❌ Standard Prompting</text>
+    
+    <!-- Input Box -->
+    <rect x="100" y="90" width="180" height="80" rx="8" class="box input-box"/>
+    <text x="190" y="115" text-anchor="middle" class="text-title">INPUT</text>
+    <text x="190" y="135" text-anchor="middle" class="text-white">Problem:</text>
+    <text x="190" y="152" text-anchor="middle" class="text-white" style="font-size: 12px;">"If x + 5 = 12,</text>
+    <text x="190" y="165" text-anchor="middle" class="text-white" style="font-size: 12px;">what is x?"</text>
+    
+    <!-- Arrow -->
+    <path d="M 290 130 L 390 130" class="arrow"/>
+    <text x="340" y="120" text-anchor="middle" class="text-label">Direct jump</text>
+    
+    <!-- Answer Box -->
+    <rect x="400" y="90" width="180" height="80" rx="8" class="box answer-box"/>
+    <text x="490" y="115" text-anchor="middle" class="text-title">ANSWER</text>
+    <text x="490" y="140" text-anchor="middle" class="text-white" style="font-size: 13px;">x = 17</text>
+    <text x="490" y="160" text-anchor="middle" class="text-white" style="font-size: 11px; font-style: italic;">(Incorrect!)</text>
+    
+    <!-- Warning Badge -->
+    <rect x="600" y="105" width="150" height="50" rx="8" class="box warning"/>
+    <text x="675" y="125" text-anchor="middle" class="badge">⚠️ HIGH RISK</text>
+    <text x="675" y="142" text-anchor="middle" class="badge" style="font-size: 10px;">No reasoning shown</text>
+  </g>
+  
+  <!-- CoT Prompting Section -->
+  <g>
+    <text x="400" y="230" text-anchor="middle" class="section-title">✅ Chain of Thought (CoT) Prompting</text>
+    <text x="400" y="255" text-anchor="middle" class="text-label" style="font-style: italic; font-size: 13px;">Magic Phrase: "Let's think step by step"</text>
+    
+    <!-- Input Box -->
+    <rect x="50" y="280" width="150" height="80" rx="8" class="box input-box"/>
+    <text x="125" y="302" text-anchor="middle" class="text-title">INPUT</text>
+    <text x="125" y="322" text-anchor="middle" class="text-white" style="font-size: 12px;">Problem:</text>
+    <text x="125" y="337" text-anchor="middle" class="text-white" style="font-size: 11px;">"If x + 5 = 12,</text>
+    <text x="125" y="350" text-anchor="middle" class="text-white" style="font-size: 11px;">what is x?"</text>
+    
+    <!-- Arrow to Reasoning -->
+    <path d="M 210 320 L 260 320" class="arrow-cot"/>
+    
+    <!-- Reasoning Box (Expanded) -->
+    <rect x="270" y="280" width="260" height="140" rx="8" class="box reasoning-box"/>
+    <text x="400" y="302" text-anchor="middle" class="text-title">REASONING STEPS</text>
+    <line x1="285" y1="310" x2="515" y2="310" stroke="white" stroke-width="1" opacity="0.5"/>
+    
+    <text x="285" y="330" class="text-white" style="font-size: 12px;">Step 1: We have x + 5 = 12</text>
+    <text x="285" y="350" class="text-white" style="font-size: 12px;">Step 2: Subtract 5 from both sides</text>
+    <text x="285" y="370" class="text-white" style="font-size: 12px;">Step 3: x = 12 - 5</text>
+    <text x="285" y="390" class="text-white" style="font-size: 12px;">Step 4: x = 7</text>
+    <text x="285" y="410" class="text-white" style="font-size: 11px; font-style: italic;">Verify: 7 + 5 = 12 ✓</text>
+    
+    <!-- Arrow to Answer -->
+    <path d="M 540 350 L 590 350" class="arrow-cot"/>
+    
+    <!-- Answer Box -->
+    <rect x="600" y="280" width="150" height="80" rx="8" class="box answer-box"/>
+    <text x="675" y="305" text-anchor="middle" class="text-title">ANSWER</text>
+    <text x="675" y="330" text-anchor="middle" class="text-white" style="font-size: 14px;">x = 7</text>
+    <text x="675" y="350" text-anchor="middle" class="text-white" style="font-size: 11px; font-style: italic;">(Correct!)</text>
+    
+    <!-- Success Badge -->
+    <rect x="600" y="375" width="150" height="45" rx="8" class="box success"/>
+    <text x="675" y="395" text-anchor="middle" class="badge">✓ HIGHER ACCURACY</text>
+    <text x="675" y="410" text-anchor="middle" class="badge" style="font-size: 10px;">Reasoning validated</text>
+  </g>
+  
+  <!-- Key Benefits Box -->
+  <rect x="50" y="440" width="700" height="45" rx="8" fill="#ecf0f1" stroke="#3498db" stroke-width="2"/>
+  <text x="70" y="460" style="font-family: Arial, sans-serif; font-size: 13px; font-weight: bold; fill: #2c3e50;">🎯 Key Benefits of CoT:</text>
+  <text x="80" y="475" style="font-family: Arial, sans-serif; font-size: 11px; fill: #34495e;">• Reduces errors in math &amp; logic  • Makes reasoning transparent &amp; debuggable  • Improves complex problem-solving  • Enables verification of each step</text>
+</svg>

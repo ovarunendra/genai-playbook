@@ -1,0 +1,50 @@
+<svg width="700" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="700" height="600" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="350" y="35" text-anchor="middle" font-size="22" font-weight="bold" fill="#212121">Generative AI Tech Stack</text>
+  
+  <!-- Layer 4: Apps (Top) -->
+  <rect x="150" y="80" width="400" height="100" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" rx="8"/>
+  <text x="350" y="110" text-anchor="middle" font-size="18" font-weight="bold" fill="#1b5e20">4. Apps</text>
+  <text x="350" y="135" text-anchor="middle" font-size="13" fill="#424242">The end-user interface</text>
+  <text x="350" y="158" text-anchor="middle" font-size="12" fill="#666">ChatGPT, GitHub Copilot</text>
+  
+  <!-- Arrow pointing down -->
+  <defs>
+    <marker id="arrow-down" markerWidth="10" markerHeight="10" refX="5" refY="9" orient="auto">
+      <polygon points="0 0, 10 0, 5 10" fill="#757575"/>
+    </marker>
+  </defs>
+  
+  <line x1="350" y1="185" x2="350" y2="205" stroke="#757575" stroke-width="3" marker-end="url(#arrow-down)"/>
+  
+  <!-- Layer 3: Model Layer -->
+  <rect x="150" y="210" width="400" height="100" fill="#fff9c4" stroke="#f57f17" stroke-width="3" rx="8"/>
+  <text x="350" y="240" text-anchor="middle" font-size="18" font-weight="bold" fill="#e65100">3. Model Layer</text>
+  <text x="350" y="265" text-anchor="middle" font-size="13" fill="#424242">The brains</text>
+  <text x="350" y="288" text-anchor="middle" font-size="12" fill="#666">Open Source: Llama | Closed: GPT-4</text>
+  
+  <line x1="350" y1="315" x2="350" y2="335" stroke="#757575" stroke-width="3" marker-end="url(#arrow-down)"/>
+  
+  <!-- Layer 2: Cloud Platforms -->
+  <rect x="150" y="340" width="400" height="100" fill="#e3f2fd" stroke="#1565c0" stroke-width="3" rx="8"/>
+  <text x="350" y="370" text-anchor="middle" font-size="18" font-weight="bold" fill="#0d47a1">2. Cloud Platforms</text>
+  <text x="350" y="395" text-anchor="middle" font-size="13" fill="#424242">Where hardware is accessed</text>
+  <text x="350" y="418" text-anchor="middle" font-size="12" fill="#666">AWS, Azure, CoreWeave</text>
+  
+  <line x1="350" y1="445" x2="350" y2="465" stroke="#757575" stroke-width="3" marker-end="url(#arrow-down)"/>
+  
+  <!-- Layer 1: Compute Hardware (Bottom) -->
+  <rect x="150" y="470" width="400" height="100" fill="#fce4ec" stroke="#c2185b" stroke-width="3" rx="8"/>
+  <text x="350" y="500" text-anchor="middle" font-size="18" font-weight="bold" fill="#880e4f">1. Compute Hardware</text>
+  <text x="350" y="525" text-anchor="middle" font-size="13" fill="#424242">The physical chips</text>
+  <text x="350" y="548" text-anchor="middle" font-size="12" fill="#666">NVIDIA GPUs, Google TPUs</text>
+  
+  <!-- Side labels for flow -->
+  <text x="600" y="135" font-size="11" fill="#757575" font-style="italic">User Layer</text>
+  <text x="600" y="265" font-size="11" fill="#757575" font-style="italic">Intelligence</text>
+  <text x="600" y="395" font-size="11" fill="#757575" font-style="italic">Infrastructure</text>
+  <text x="600" y="525" font-size="11" fill="#757575" font-style="italic">Foundation</text>
+</svg>

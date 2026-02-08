@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 450">
+  <defs>
+    <style>
+      .main-title { font-family: Arial, sans-serif; font-size: 26px; font-weight: bold; fill: #2c3e50; }
+      .stage-number { font-family: Arial, sans-serif; font-size: 14px; fill: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+      .stage-title { font-family: Arial, sans-serif; font-size: 16px; fill: white; font-weight: bold; }
+      .stage-detail { font-family: Arial, sans-serif; font-size: 11px; fill: white; }
+      .result-title { font-family: Arial, sans-serif; font-size: 13px; fill: white; font-weight: bold; }
+      .result-text { font-family: Arial, sans-serif; font-size: 10px; fill: white; }
+      .arrow-label { font-family: Arial, sans-serif; font-size: 11px; fill: #7f8c8d; font-weight: bold; }
+    </style>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#34495e"/>
+    </marker>
+    <linearGradient id="stage1Gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="stage2Gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f39c12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e67e22;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="stage3Gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2ecc71;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#27ae60;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Title -->
+  <text x="550" y="35" text-anchor="middle" class="main-title">The 3-Stage Training Pipeline</text>
+  <text x="550" y="58" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; fill: #7f8c8d; font-style: italic;">From internet document simulator to helpful AI assistant</text>
+  
+  <!-- Stage 1: Pre-training -->
+  <g>
+    <rect x="50" y="100" width="280" height="280" rx="12" fill="url(#stage1Gradient)" stroke="#2471a3" stroke-width="4"/>
+    
+    <!-- Stage number badge -->
+    <circle cx="100" cy="130" r="20" fill="#2980b9" stroke="#1f618d" stroke-width="2"/>
+    <text x="100" y="137" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 16px; fill: white; font-weight: bold;">1</text>
+    
+    <text x="190" y="125" text-anchor="middle" class="stage-number">Stage 1</text>
+    <text x="190" y="148" text-anchor="middle" class="stage-title">Pre-training</text>
+    <line x1="70" y1="155" x2="310" y2="155" stroke="white" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Input -->
+    <rect x="70" y="170" width="240" height="60" rx="6" fill="#2471a3" opacity="0.6"/>
+    <text x="190" y="185" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: white; font-weight: bold;">📚 INPUT: Raw Data</text>
+    <text x="190" y="202" text-anchor="middle" class="stage-detail">Internet text (TBs)</text>
+    <text x="190" y="216" text-anchor="middle" class="stage-detail">CommonCrawl, Wikipedia,</text>
+    <text x="190" y="227" text-anchor="middle" class="stage-detail">GitHub, Books, ArXiv</text>
+    
+    <!-- Arrow down -->
+    <path d="M 190 235 L 190 255" stroke="white" stroke-width="3" opacity="0.8" marker-end="url(#whiteArrow)"/>
+    <defs>
+      <marker id="whiteArrow" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="white" opacity="0.8"/>
+      </marker>
+    </defs>
+    
+    <!-- Output -->
+    <rect x="70" y="260" width="240" height="105" rx="6" fill="#1a5490" opacity="0.7"/>
+    <text x="190" y="278" text-anchor="middle" class="result-title">✨ OUTPUT</text>
+    <text x="190" y="295" text-anchor="middle" class="result-title">Base Model</text>
+    <line x1="90" y1="302" x2="290" y2="302" stroke="white" stroke-width="1" opacity="0.3"/>
+    <text x="190" y="317" text-anchor="middle" class="result-text">"Internet Document Simulator"</text>
+    <text x="190" y="332" text-anchor="middle" class="result-text">Knows patterns &amp; facts, but</text>
+    <text x="190" y="345" text-anchor="middle" class="result-text">doesn't follow instructions well</text>
+    <text x="190" y="358" text-anchor="middle" style="font-size: 9px; fill: #ecf0f1; font-style: italic;">(Might complete "Q: What is...?" with "Q: Who is...?")</text>
+  </g>
+  
+  <!-- Arrow 1 to 2 -->
+  <path d="M 335 240 L 395 240" stroke="#34495e" stroke-width="5" marker-end="url(#arrowhead)"/>
+  <text x="365" y="230" text-anchor="middle" class="arrow-label">Transform</text>
+  
+  <!-- Stage 2: Supervised Fine-Tuning -->
+  <g>
+    <rect x="400" y="100" width="280" height="280" rx="12" fill="url(#stage2Gradient)" stroke="#d68910" stroke-width="4"/>
+    
+    <!-- Stage number badge -->
+    <circle cx="450" cy="130" r="20" fill="#e67e22" stroke="#ca6f1e" stroke-width="2"/>
+    <text x="450" y="137" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 16px; fill: white; font-weight: bold;">2</text>
+    
+    <text x="540" y="125" text-anchor="middle" class="stage-number">Stage 2</text>
+    <text x="540" y="148" text-anchor="middle" class="stage-title">Supervised Fine-Tuning</text>
+    <line x1="420" y1="155" x2="660" y2="155" stroke="white" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Input -->
+    <rect x="420" y="170" width="240" height="60" rx="6" fill="#d68910" opacity="0.6"/>
+    <text x="540" y="185" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: white; font-weight: bold;">💬 INPUT: Q&amp;A Data</text>
+    <text x="540" y="202" text-anchor="middle" class="stage-detail">High-quality labeled examples</text>
+    <text x="540" y="216" text-anchor="middle" class="stage-detail">10k-100k prompt-response pairs</text>
+    <text x="540" y="227" text-anchor="middle" class="stage-detail">Created by human labelers</text>
+    
+    <!-- Arrow down -->
+    <path d="M 540 235 L 540 255" stroke="white" stroke-width="3" opacity="0.8" marker-end="url(#whiteArrow)"/>
+    
+    <!-- Output -->
+    <rect x="420" y="260" width="240" height="105" rx="6" fill="#b8650b" opacity="0.7"/>
+    <text x="540" y="278" text-anchor="middle" class="result-title">✨ OUTPUT</text>
+    <text x="540" y="295" text-anchor="middle" class="result-title">SFT Model</text>
+    <line x1="440" y1="302" x2="640" y2="302" stroke="white" stroke-width="1" opacity="0.3"/>
+    <text x="540" y="317" text-anchor="middle" class="result-text">"Instruction-Following Assistant"</text>
+    <text x="540" y="332" text-anchor="middle" class="result-text">Can answer questions &amp;</text>
+    <text x="540" y="345" text-anchor="middle" class="result-text">follow commands correctly</text>
+    <text x="540" y="358" text-anchor="middle" style="font-size: 9px; fill: #ecf0f1; font-style: italic;">(Now responds: "A: Paris is the capital of France")</text>
+  </g>
+  
+  <!-- Arrow 2 to 3 -->
+  <path d="M 685 240 L 745 240" stroke="#34495e" stroke-width="5" marker-end="url(#arrowhead)"/>
+  <text x="715" y="230" text-anchor="middle" class="arrow-label">Align</text>
+  
+  <!-- Stage 3: RLHF -->
+  <g>
+    <rect x="750" y="100" width="300" height="280" rx="12" fill="url(#stage3Gradient)" stroke="#1e8449" stroke-width="4"/>
+    
+    <!-- Stage number badge -->
+    <circle cx="800" cy="130" r="20" fill="#27ae60" stroke="#1e8449" stroke-width="2"/>
+    <text x="800" y="137" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 16px; fill: white; font-weight: bold;">3</text>
+    
+    <text x="900" y="125" text-anchor="middle" class="stage-number">Stage 3</text>
+    <text x="900" y="148" text-anchor="middle" class="stage-title">RLHF</text>
+    <line x1="770" y1="155" x2="1030" y2="155" stroke="white" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Input -->
+    <rect x="770" y="170" width="260" height="60" rx="6" fill="#1e8449" opacity="0.6"/>
+    <text x="900" y="185" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: white; font-weight: bold;">👥 INPUT: Human Feedback</text>
+    <text x="900" y="202" text-anchor="middle" class="stage-detail">Humans rank multiple responses</text>
+    <text x="900" y="216" text-anchor="middle" class="stage-detail">(A &gt; B &gt; C)</text>
+    <text x="900" y="227" text-anchor="middle" class="stage-detail">Train reward model to grade outputs</text>
+    
+    <!-- Arrow down -->
+    <path d="M 900 235 L 900 255" stroke="white" stroke-width="3" opacity="0.8" marker-end="url(#whiteArrow)"/>
+    
+    <!-- Output -->
+    <rect x="770" y="260" width="260" height="105" rx="6" fill="#186a3b" opacity="0.7"/>
+    <text x="900" y="278" text-anchor="middle" class="result-title">✨ OUTPUT</text>
+    <text x="900" y="295" text-anchor="middle" class="result-title">Final Model</text>
+    <line x1="790" y1="302" x2="1010" y2="302" stroke="white" stroke-width="1" opacity="0.3"/>
+    <text x="900" y="317" text-anchor="middle" class="result-text">"Aligned AI Assistant"</text>
+    <text x="900" y="332" text-anchor="middle" class="result-text">Safe, helpful, and follows</text>
+    <text x="900" y="345" text-anchor="middle" class="result-text">human preferences</text>
+    <text x="900" y="358" text-anchor="middle" style="font-size: 9px; fill: #ecf0f1; font-style: italic;">(Ready for production use!)</text>
+  </g>
+  
+  <!-- Bottom timeline -->
+  <g>
+    <line x1="50" y1="410" x2="1050" y2="410" stroke="#bdc3c7" stroke-width="2"/>
+    <text x="190" y="430" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #7f8c8d;">⏱️ Weeks-Months</text>
+    <text x="190" y="442" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #7f8c8d; font-weight: bold;">$$$$ Most Expensive</text>
+    
+    <text x="540" y="430" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #7f8c8d;">⏱️ Days-Weeks</text>
+    <text x="540" y="442" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #7f8c8d; font-weight: bold;">$$ Moderate Cost</text>
+    
+    <text x="900" y="430" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #7f8c8d;">⏱️ Days</text>
+    <text x="900" y="442" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #7f8c8d; font-weight: bold;">$ Lower Cost</text>
+  </g>
+</svg>

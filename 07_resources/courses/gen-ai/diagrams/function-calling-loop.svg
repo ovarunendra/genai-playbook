@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <defs>
+    <style>
+      .step-user { fill: #3498db; stroke: #2980b9; stroke-width: 3; }
+      .step-llm1 { fill: #9b59b6; stroke: #8e44ad; stroke-width: 3; }
+      .step-system { fill: #e67e22; stroke: #d68910; stroke-width: 3; }
+      .step-llm2 { fill: #2ecc71; stroke: #27ae60; stroke-width: 3; }
+      .text-title { font-family: Arial, sans-serif; font-size: 16px; fill: white; font-weight: bold; text-anchor: middle; }
+      .text-content { font-family: Arial, sans-serif; font-size: 13px; fill: white; text-anchor: middle; }
+      .text-code { font-family: 'Courier New', monospace; font-size: 13px; fill: white; text-anchor: middle; font-weight: bold; }
+      .main-title { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #2c3e50; }
+      .arrow { stroke: #2c3e50; stroke-width: 4; fill: none; marker-end: url(#arrowhead); }
+      .label-text { font-family: Arial, sans-serif; font-size: 13px; fill: #2c3e50; font-weight: bold; }
+      .step-number { font-family: Arial, sans-serif; font-size: 20px; fill: white; font-weight: bold; text-anchor: middle; }
+    </style>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#2c3e50"/>
+    </marker>
+    <linearGradient id="userGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5dade2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3498db;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="llm1Gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#af7ac5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9b59b6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="systemGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f39c12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e67e22;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="llm2Gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#52be80;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2ecc71;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" class="main-title">Function Calling Conversational Loop</text>
+  <text x="450" y="58" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 13px; fill: #7f8c8d; font-style: italic;">How LLMs interact with external tools and APIs</text>
+  
+  <!-- Step 1: User (Top) -->
+  <g>
+    <rect x="325" y="100" width="250" height="100" rx="15" fill="url(#userGradient)" class="step-user"/>
+    <circle cx="365" cy="120" r="20" fill="#2980b9"/>
+    <text x="365" y="128" class="step-number">1</text>
+    <text x="450" y="135" class="text-title">👤 USER</text>
+    <line x1="345" y1="145" x2="555" y2="145" stroke="white" stroke-width="1" opacity="0.5"/>
+    <text x="450" y="167" class="text-content" style="font-size: 15px;">"What's the weather?"</text>
+    <text x="450" y="188" class="text-content" style="font-size: 11px; font-style: italic;">Asks a question</text>
+  </g>
+  
+  <!-- Arrow 1 -->
+  <path d="M 575 150 L 640 200" class="arrow"/>
+  <text x="615" y="170" class="label-text">Sends</text>
+  <text x="615" y="185" class="label-text">query</text>
+  
+  <!-- Step 2: LLM Decides (Right) -->
+  <g>
+    <rect x="650" y="210" width="220" height="120" rx="15" fill="url(#llm1Gradient)" class="step-llm1"/>
+    <circle cx="690" cy="230" r="20" fill="#8e44ad"/>
+    <text x="690" y="238" class="step-number">2</text>
+    <text x="760" y="250" class="text-title">🤖 LLM DECIDES</text>
+    <line x1="670" y1="260" x2="850" y2="260" stroke="white" stroke-width="1" opacity="0.5"/>
+    <text x="760" y="280" class="text-content" style="font-size: 12px;">Thinking...</text>
+    <text x="760" y="298" class="text-content" style="font-size: 11px; font-style: italic;">"I need external data"</text>
+    <text x="760" y="318" class="text-code">get_weather()</text>
+  </g>
+  
+  <!-- Arrow 2 -->
+  <path d="M 760 340 L 760 400" class="arrow"/>
+  <text x="780" y="370" class="label-text">Outputs</text>
+  <text x="780" y="385" class="label-text">tool call</text>
+  
+  <!-- Step 3: System Executes (Bottom Right) -->
+  <g>
+    <rect x="650" y="410" width="220" height="120" rx="15" fill="url(#systemGradient)" class="step-system"/>
+    <circle cx="690" cy="430" r="20" fill="#d68910"/>
+    <text x="690" y="438" class="step-number">3</text>
+    <text x="760" y="450" class="text-title">⚙️ SYSTEM</text>
+    <line x1="670" y1="460" x2="850" y2="460" stroke="white" stroke-width="1" opacity="0.5"/>
+    <text x="760" y="482" class="text-content">Executes function</text>
+    <text x="760" y="502" class="text-code">return "72°F"</text>
+    <text x="760" y="520" class="text-content" style="font-size: 11px; font-style: italic;">Gets real data</text>
+  </g>
+  
+  <!-- Arrow 3 -->
+  <path d="M 640 470 L 575 470" class="arrow"/>
+  <text x="615" y="460" class="label-text">Returns</text>
+  <text x="615" y="475" class="label-text">result</text>
+  
+  <!-- Step 4: LLM Responds (Bottom Left) -->
+  <g>
+    <rect x="30" y="410" width="240" height="120" rx="15" fill="url(#llm2Gradient)" class="step-llm2"/>
+    <circle cx="70" cy="430" r="20" fill="#27ae60"/>
+    <text x="70" y="438" class="step-number">4</text>
+    <text x="150" y="450" class="text-title">🤖 LLM RESPONDS</text>
+    <line x1="50" y1="460" x2="250" y2="460" stroke="white" stroke-width="1" opacity="0.5"/>
+    <text x="150" y="482" class="text-content">Generates final answer:</text>
+    <text x="150" y="504" class="text-content" style="font-size: 14px;">"It is 72°F and sunny."</text>
+  </g>
+  
+  <!-- Arrow 4 (back to user) -->
+  <path d="M 150 410 L 325 220" class="arrow"/>
+  <text x="215" y="300" class="label-text">Delivers</text>
+  <text x="215" y="315" class="label-text">response</text>
+  
+  <!-- Central loop indicator -->
+  <circle cx="450" cy="320" r="80" fill="none" stroke="#95a5a6" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="450" y="315" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; fill: #7f8c8d; font-weight: bold;">Conversational</text>
+  <text x="450" y="332" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; fill: #7f8c8d; font-weight: bold;">Loop</text>
+  
+  <!-- Key Insight Box -->
+  <rect x="30" y="555" width="840" height="35" rx="8" fill="#ecf0f1" stroke="#3498db" stroke-width="2"/>
+  <text x="50" y="575" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; fill: #2c3e50;">🔑 Key Insight:</text>
+  <text x="140" y="575" style="font-family: Arial, sans-serif; font-size: 11px; fill: #34495e;">The LLM doesn't execute code itself—it outputs structured requests. Your application executes the function and feeds the result back.</text>
+</svg>

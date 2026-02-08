@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <defs>
+    <style>
+      .node-root { fill: #3498db; stroke: #2c3e50; stroke-width: 3; }
+      .node-thought { fill: #9b59b6; stroke: #2c3e50; stroke-width: 2; }
+      .node-approved { fill: #2ecc71; stroke: #27ae60; stroke-width: 2; }
+      .node-pruned { fill: #e74c3c; stroke: #c0392b; stroke-width: 2; }
+      .node-final { fill: #f39c12; stroke: #d68910; stroke-width: 3; }
+      .text-white { font-family: Arial, sans-serif; font-size: 13px; fill: white; font-weight: 500; text-anchor: middle; }
+      .text-title { font-family: Arial, sans-serif; font-size: 14px; fill: white; font-weight: bold; text-anchor: middle; }
+      .text-small { font-family: Arial, sans-serif; font-size: 11px; fill: white; text-anchor: middle; }
+      .main-title { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #2c3e50; }
+      .branch-line { stroke: #7f8c8d; stroke-width: 2; fill: none; }
+      .branch-active { stroke: #27ae60; stroke-width: 3; fill: none; }
+      .branch-pruned { stroke: #e74c3c; stroke-width: 2; fill: none; stroke-dasharray: 5,5; }
+      .backtrack-arrow { stroke: #f39c12; stroke-width: 3; fill: none; marker-end: url(#backtrack-arrow); stroke-dasharray: 8,4; }
+      .label-text { font-family: Arial, sans-serif; font-size: 11px; fill: #2c3e50; font-weight: bold; }
+    </style>
+    <marker id="backtrack-arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#f39c12"/>
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" class="main-title">Tree of Thoughts (ToT) - Decision Tree</text>
+  <text x="450" y="50" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 13px; fill: #7f8c8d; font-style: italic;">Exploring multiple reasoning paths simultaneously</text>
+  
+  <!-- Root Node -->
+  <g>
+    <rect x="375" y="80" width="150" height="60" rx="30" class="node-root"/>
+    <text x="450" y="105" class="text-title">INPUT PROBLEM</text>
+    <text x="450" y="125" class="text-small">"Write a story about AI"</text>
+  </g>
+  
+  <!-- Branch Lines from Root to Level 1 -->
+  <path d="M 410 140 L 200 200" class="branch-line"/>
+  <path d="M 450 140 L 450 200" class="branch-active"/>
+  <path d="M 490 140 L 700 200" class="branch-pruned"/>
+  
+  <!-- Level 1: Initial Thoughts -->
+  <g>
+    <!-- Thought A (will be pruned) -->
+    <rect x="130" y="200" width="140" height="70" rx="10" class="node-thought"/>
+    <text x="200" y="222" class="text-title">THOUGHT A</text>
+    <text x="200" y="240" class="text-small">Plot Idea:</text>
+    <text x="200" y="255" class="text-small">"Robot uprising"</text>
+    
+    <!-- Thought B (approved, will explore) -->
+    <rect x="380" y="200" width="140" height="70" rx="10" class="node-thought"/>
+    <text x="450" y="222" class="text-title">THOUGHT B</text>
+    <text x="450" y="240" class="text-small">Plot Idea:</text>
+    <text x="450" y="255" class="text-small">"AI helps humanity"</text>
+    
+    <!-- Thought C (will be pruned) -->
+    <rect x="630" y="200" width="140" height="70" rx="10" class="node-thought"/>
+    <text x="700" y="222" class="text-title">THOUGHT C</text>
+    <text x="700" y="240" class="text-small">Plot Idea:</text>
+    <text x="700" y="255" class="text-small">"Time travel paradox"</text>
+  </g>
+  
+  <!-- Evaluation Icons Level 1 -->
+  <g>
+    <!-- Trash can for A -->
+    <rect x="185" y="280" width="30" height="35" rx="3" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+    <path d="M 190 285 L 210 285 M 193 290 L 193 308 M 200 290 L 200 308 M 207 290 L 207 308" stroke="white" stroke-width="2"/>
+    <text x="200" y="330" class="label-text" fill="#e74c3c">✗ PRUNE</text>
+    
+    <!-- Check for B -->
+    <circle cx="450" cy="295" r="18" fill="#2ecc71" stroke="#27ae60" stroke-width="2"/>
+    <path d="M 442 295 L 447 302 L 458 288" stroke="white" stroke-width="3" fill="none"/>
+    <text x="450" y="330" class="label-text" fill="#2ecc71">✓ EXPLORE</text>
+    
+    <!-- Trash can for C -->
+    <rect x="685" y="280" width="30" height="35" rx="3" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+    <path d="M 690 285 L 710 285 M 693 290 L 693 308 M 700 290 L 700 308 M 707 290 L 707 308" stroke="white" stroke-width="2"/>
+    <text x="700" y="330" class="label-text" fill="#e74c3c">✗ PRUNE</text>
+  </g>
+  
+  <!-- Branch Lines from B to Level 2 -->
+  <path d="M 420 310 L 330 380" class="branch-active"/>
+  <path d="M 450 310 L 450 380" class="branch-pruned"/>
+  <path d="M 480 310 L 570 380" class="branch-active"/>
+  
+  <!-- Level 2: Deeper Exploration of Thought B -->
+  <g>
+    <!-- Thought B1 -->
+    <rect x="260" y="380" width="140" height="70" rx="10" class="node-thought"/>
+    <text x="330" y="402" class="text-title">THOUGHT B1</text>
+    <text x="330" y="420" class="text-small">Character:</text>
+    <text x="330" y="435" class="text-small">"Wise AI mentor"</text>
+    
+    <!-- Thought B2 -->
+    <rect x="415" y="380" width="70" height="70" rx="10" class="node-pruned"/>
+    <text x="450" y="410" class="text-small">Dead</text>
+    <text x="450" y="425" class="text-small">End</text>
+    
+    <!-- Thought B3 -->
+    <rect x="500" y="380" width="140" height="70" rx="10" class="node-thought"/>
+    <text x="570" y="402" class="text-title">THOUGHT B3</text>
+    <text x="570" y="420" class="text-small">Setting:</text>
+    <text x="570" y="435" class="text-small">"Future city 2150"</text>
+  </g>
+  
+  <!-- Evaluation Icons Level 2 -->
+  <g>
+    <!-- Check for B1 -->
+    <circle cx="330" cy="465" r="18" fill="#2ecc71" stroke="#27ae60" stroke-width="2"/>
+    <path d="M 322 465 L 327 472 L 338 458" stroke="white" stroke-width="3" fill="none"/>
+    
+    <!-- Trash for B2 -->
+    <rect x="435" y="455" width="30" height="35" rx="3" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+    <path d="M 440 460 L 460 460 M 443 465 L 443 483 M 450 465 L 450 483 M 457 465 L 457 483" stroke="white" stroke-width="2"/>
+    
+    <!-- Check for B3 -->
+    <circle cx="570" cy="465" r="18" fill="#2ecc71" stroke="#27ae60" stroke-width="2"/>
+    <path d="M 562 465 L 567 472 L 578 458" stroke="white" stroke-width="3" fill="none"/>
+  </g>
+  
+  <!-- Backtrack Arrow from B2 -->
+  <path d="M 450 455 Q 450 390, 450 340" class="backtrack-arrow"/>
+  <text x="470" y="400" style="font-family: Arial, sans-serif; font-size: 10px; fill: #f39c12; font-weight: bold;">Backtrack</text>
+  
+  <!-- Combine successful branches to final solution -->
+  <path d="M 330 500 L 400 540" class="branch-active"/>
+  <path d="M 570 500 L 500 540" class="branch-active"/>
+  
+  <!-- Final Solution Node -->
+  <g>
+    <rect x="330" y="540" width="240" height="50" rx="25" class="node-final"/>
+    <text x="450" y="563" class="text-title">FINAL SOLUTION</text>
+    <text x="450" y="580" class="text-small">"Story: AI mentor in 2150 helps humanity"</text>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(50, 480)">
+    <rect x="0" y="0" width="200" height="100" rx="8" fill="#ecf0f1" stroke="#3498db" stroke-width="2"/>
+    <text x="10" y="20" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; fill: #2c3e50;">Legend:</text>
+    
+    <circle cx="20" cy="35" r="8" fill="#2ecc71"/>
+    <text x="35" y="40" style="font-family: Arial, sans-serif; font-size: 10px; fill: #2c3e50;">Promising path (keep)</text>
+    
+    <rect x="12" y="50" width="16" height="16" fill="#e74c3c"/>
+    <text x="35" y="62" style="font-family: Arial, sans-serif; font-size: 10px; fill: #2c3e50;">Dead end (prune)</text>
+    
+    <line x1="12" y1="75" x2="28" y2="75" stroke="#f39c12" stroke-width="2" stroke-dasharray="4,2"/>
+    <text x="35" y="78" style="font-family: Arial, sans-serif; font-size: 10px; fill: #2c3e50;">Backtrack &amp; explore</text>
+  </g>
+</svg>

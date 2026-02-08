@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <defs>
+    <style>
+      .main-title { font-family: Arial, sans-serif; font-size: 26px; font-weight: bold; fill: #2c3e50; }
+      .section-title { font-family: Arial, sans-serif; font-size: 14px; fill: white; font-weight: bold; text-transform: uppercase; }
+      .input-text { font-family: Arial, sans-serif; font-size: 16px; fill: #2c3e50; font-style: italic; }
+      .token-text { font-family: Arial, sans-serif; font-size: 14px; fill: white; font-weight: bold; }
+      .prob-text { font-family: Arial, sans-serif; font-size: 13px; fill: white; }
+      .percent-text { font-family: Arial, sans-serif; font-size: 18px; fill: white; font-weight: bold; }
+      .label-text { font-family: Arial, sans-serif; font-size: 11px; fill: #7f8c8d; font-weight: bold; }
+    </style>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#34495e"/>
+    </marker>
+    <linearGradient id="inputGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="llmGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#9b59b6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8e44ad;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="winnerGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f39c12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e67e22;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="option2Gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="option3Gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#95a5a6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7f8c8d;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" class="main-title">Next Token Prediction</text>
+  <text x="450" y="58" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; fill: #7f8c8d; font-style: italic;">How LLMs generate text one token at a time</text>
+  
+  <!-- Step 1: Input -->
+  <g>
+    <text x="60" y="110" class="label-text">STEP 1: INPUT</text>
+    <rect x="60" y="120" width="780" height="60" rx="10" fill="url(#inputGradient)" stroke="#2980b9" stroke-width="3"/>
+    <text x="450" y="145" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 13px; fill: white; font-weight: bold;">User's Text:</text>
+    <text x="450" y="165" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 16px; fill: white;">"In that match Virat Kohli hit a</text>
+    <rect x="670" y="152" width="40" height="20" rx="4" fill="#2980b9" opacity="0.6"/>
+    <text x="690" y="166" text-anchor="middle" style="font-family: 'Courier New', monospace; font-size: 12px; fill: white; font-weight: bold;">...</text>
+    <text x="735" y="166" text-anchor="start" style="font-family: Arial, sans-serif; font-size: 16px; fill: white;">"</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M 450 185 L 450 215" stroke="#34495e" stroke-width="4" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 2: LLM Processing -->
+  <g>
+    <text x="60" y="235" class="label-text">STEP 2: LLM CALCULATES PROBABILITIES</text>
+    <rect x="60" y="245" width="780" height="80" rx="10" fill="url(#llmGradient)" stroke="#7d3c98" stroke-width="3"/>
+    <text x="450" y="270" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; fill: white; font-weight: bold;">🤖 Model analyzes context &amp; computes next token probabilities</text>
+    <line x1="80" y1="280" x2="820" y2="280" stroke="white" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Brain icon -->
+    <circle cx="450" cy="302" r="15" fill="#7d3c98" opacity="0.5"/>
+    <text x="450" y="311" text-anchor="middle" style="font-size: 18px;">🧠</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M 450 330 L 450 360" stroke="#34495e" stroke-width="4" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 3: Probability Distribution -->
+  <g>
+    <text x="60" y="380" class="label-text">STEP 3: PROBABILITY DISTRIBUTION</text>
+    
+    <!-- Option 1: Six (45%) - WINNER -->
+    <rect x="60" y="390" width="250" height="80" rx="10" fill="url(#winnerGradient)" stroke="#d68910" stroke-width="4"/>
+    <text x="185" y="415" text-anchor="middle" class="token-text">"Six"</text>
+    <line x1="80" y1="425" x2="290" y2="425" stroke="white" stroke-width="1" opacity="0.5"/>
+    <text x="185" y="445" text-anchor="middle" class="percent-text">45%</text>
+    <rect x="80" y="455" width="210" height="10" rx="5" fill="#d68910" opacity="0.6"/>
+    <rect x="80" y="455" width="189" height="10" rx="5" fill="#f5b041"/>
+    
+    <!-- Crown for winner -->
+    <text x="285" y="405" text-anchor="middle" style="font-size: 24px;">👑</text>
+    
+    <!-- Option 2: Century (30%) -->
+    <rect x="325" y="390" width="250" height="80" rx="10" fill="url(#option2Gradient)" stroke="#2471a3" stroke-width="3"/>
+    <text x="450" y="415" text-anchor="middle" class="token-text">"Century"</text>
+    <line x1="345" y1="425" x2="555" y2="425" stroke="white" stroke-width="1" opacity="0.5"/>
+    <text x="450" y="445" text-anchor="middle" class="percent-text">30%</text>
+    <rect x="345" y="455" width="210" height="10" rx="5" fill="#2471a3" opacity="0.6"/>
+    <rect x="345" y="455" width="126" height="10" rx="5" fill="#5dade2"/>
+    
+    <!-- Option 3: Ball (5%) -->
+    <rect x="590" y="390" width="250" height="80" rx="10" fill="url(#option3Gradient)" stroke="#5d6d7e" stroke-width="3"/>
+    <text x="715" y="415" text-anchor="middle" class="token-text">"Ball"</text>
+    <line x1="610" y1="425" x2="820" y2="425" stroke="white" stroke-width="1" opacity="0.5"/>
+    <text x="715" y="445" text-anchor="middle" class="percent-text">5%</text>
+    <rect x="610" y="455" width="210" height="10" rx="5" fill="#5d6d7e" opacity="0.6"/>
+    <rect x="610" y="455" width="21" height="10" rx="5" fill="#bdc3c7"/>
+  </g>
+  
+  <!-- Bottom explanation -->
+  <rect x="60" y="485" width="780" height="10" rx="5" fill="#ecf0f1"/>
+  <text x="450" y="495" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: #2c3e50; font-weight: bold;">✨ Selection: Model picks "Six" (highest probability) → Output: "In that match Virat Kohli hit a Six"</text>
+</svg>

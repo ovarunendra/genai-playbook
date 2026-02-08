@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+  <defs>
+    <style>
+      .terminal-bg { fill: #1a1a1a; stroke: #333; stroke-width: 2; }
+      .terminal-text { fill: #00ff00; font-family: 'Courier New', monospace; font-size: 14px; }
+      .chat-bg { fill: #ffffff; stroke: #ddd; stroke-width: 2; }
+      .chat-bubble-user { fill: #007aff; }
+      .chat-bubble-ai { fill: #e5e5ea; }
+      .chat-text { fill: #000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 12px; }
+      .chat-text-user { fill: #fff; }
+      .label-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; font-weight: 600; fill: #333; }
+      .label-subtext { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; fill: #666; }
+      .arrow { fill: none; stroke: #007aff; stroke-width: 3; marker-end: url(#arrowhead); }
+      .title-bar { fill: #2d2d2d; }
+      .window-button { stroke: none; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#007aff" />
+    </marker>
+  </defs>
+  
+  <!-- Left Side: Terminal Window -->
+  <g id="terminal">
+    <!-- Window frame -->
+    <rect x="20" y="80" width="340" height="240" rx="8" class="terminal-bg"/>
+    
+    <!-- Title bar -->
+    <rect x="20" y="80" width="340" height="30" rx="8" class="title-bar"/>
+    <rect x="20" y="95" width="340" height="15" class="title-bar"/>
+    
+    <!-- Window buttons -->
+    <circle cx="35" cy="95" r="6" class="window-button" fill="#ff5f56"/>
+    <circle cx="55" cy="95" r="6" class="window-button" fill="#ffbd2e"/>
+    <circle cx="75" cy="95" r="6" class="window-button" fill="#27c93f"/>
+    
+    <!-- Terminal text content -->
+    <text x="35" y="135" class="terminal-text">$ python gen_ai_model.py</text>
+    <text x="35" y="160" class="terminal-text">&gt;&gt;&gt; Loading model...</text>
+    <text x="35" y="185" class="terminal-text">&gt;&gt;&gt; Model loaded</text>
+    <text x="35" y="210" class="terminal-text">&gt;&gt;&gt; Enter prompt:</text>
+    <text x="35" y="235" class="terminal-text">Summarize this text...</text>
+    <text x="35" y="260" class="terminal-text">&gt;&gt;&gt; Processing...</text>
+    <text x="35" y="285" class="terminal-text">█</text>
+    
+    <!-- Label -->
+    <text x="190" y="350" text-anchor="middle" class="label-text">Experiment</text>
+    <text x="190" y="370" text-anchor="middle" class="label-subtext">(Devs Only)</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M 380 200 L 520 200" class="arrow"/>
+  
+  <!-- Right Side: Chat Interface -->
+  <g id="chat">
+    <!-- Chat window frame -->
+    <rect x="540" y="80" width="340" height="240" rx="8" class="chat-bg"/>
+    
+    <!-- Header -->
+    <rect x="540" y="80" width="340" height="40" rx="8" fill="#f8f8f8"/>
+    <rect x="540" y="105" width="340" height="15" fill="#f8f8f8"/>
+    <circle cx="570" cy="100" r="15" fill="#007aff"/>
+    <text x="595" y="105" class="chat-text" font-weight="600">AI Assistant</text>
+    
+    <!-- Chat bubbles -->
+    <!-- User message -->
+    <rect x="630" y="140" width="230" height="35" rx="18" class="chat-bubble-user"/>
+    <text x="645" y="158" class="chat-text chat-text-user">Can you summarize</text>
+    <text x="645" y="170" class="chat-text chat-text-user">this article for me?</text>
+    
+    <!-- AI response -->
+    <rect x="560" y="190" width="280" height="50" rx="18" class="chat-bubble-ai"/>
+    <text x="575" y="208" class="chat-text">Of course! Here's a summary:</text>
+    <text x="575" y="223" class="chat-text">The article discusses key trends</text>
+    <text x="575" y="235" class="chat-text">in AI development...</text>
+    
+    <!-- Input box -->
+    <rect x="555" y="270" width="280" height="35" rx="18" fill="#f0f0f0" stroke="#ccc" stroke-width="1"/>
+    <text x="575" y="293" class="chat-text" fill="#999">Type a message...</text>
+    <circle cx="850" cy="287.5" r="12" fill="#007aff"/>
+    <path d="M 847 287.5 L 853 287.5 M 850 284.5 L 853 287.5 L 850 290.5" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Label -->
+    <text x="710" y="350" text-anchor="middle" class="label-text">Experience</text>
+    <text x="710" y="370" text-anchor="middle" class="label-subtext">(End Users)</text>
+  </g>
+  
+  <!-- Main Title -->
+  <text x="450" y="40" text-anchor="middle" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 24px; font-weight: 700; fill: #1a1a1a;">The Evolution: From Experiment to Experience</text>
+</svg>

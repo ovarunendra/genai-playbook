@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600">
+  <defs>
+    <style>
+      .main-title { font-family: Arial, sans-serif; font-size: 26px; font-weight: bold; fill: #2c3e50; }
+      .column-title { font-family: Arial, sans-serif; font-size: 18px; fill: white; font-weight: bold; }
+      .row-label { font-family: Arial, sans-serif; font-size: 13px; fill: #2c3e50; font-weight: bold; text-transform: uppercase; }
+      .content-text { font-family: Arial, sans-serif; font-size: 12px; fill: white; }
+      .content-bold { font-family: Arial, sans-serif; font-size: 13px; fill: white; font-weight: bold; }
+      .subtitle-text { font-family: Arial, sans-serif; font-size: 10px; fill: white; font-style: italic; }
+    </style>
+    <linearGradient id="sftGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="rlhfGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2ecc71;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#27ae60;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Title -->
+  <text x="500" y="35" text-anchor="middle" class="main-title">SFT vs. RLHF (PPO)</text>
+  <text x="500" y="58" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; fill: #7f8c8d; font-style: italic;">Two complementary approaches to training helpful AI assistants</text>
+  
+  <!-- VS divider -->
+  <circle cx="500" cy="350" r="40" fill="#e74c3c" stroke="#c0392b" stroke-width="3"/>
+  <text x="500" y="360" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 22px; fill: white; font-weight: bold;">VS</text>
+  
+  <!-- Left Column: SFT -->
+  <g>
+    <!-- Header -->
+    <rect x="50" y="100" width="400" height="70" rx="10" fill="url(#sftGradient)" stroke="#2471a3" stroke-width="4"/>
+    <text x="250" y="125" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 12px; fill: white; font-weight: bold; letter-spacing: 2px;">APPROACH 1</text>
+    <text x="250" y="150" text-anchor="middle" class="column-title">Supervised Fine-Tuning</text>
+    <text x="250" y="165" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">(SFT)</text>
+    
+    <!-- Row 1: Method -->
+    <rect x="50" y="190" width="400" height="80" rx="8" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="2"/>
+    <text x="70" y="210" class="row-label">📚 Method</text>
+    <line x1="70" y1="215" x2="430" y2="215" stroke="#bdc3c7" stroke-width="1"/>
+    <rect x="70" y="225" width="360" height="38" rx="6" fill="url(#sftGradient)" opacity="0.8"/>
+    <text x="250" y="245" text-anchor="middle" class="content-bold">"Copy the Teacher"</text>
+    <text x="250" y="258" text-anchor="middle" class="subtitle-text">Learn by imitation</text>
+    
+    <!-- Row 2: Data -->
+    <rect x="50" y="280" width="400" height="95" rx="8" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="2"/>
+    <text x="70" y="300" class="row-label">💾 Data</text>
+    <line x1="70" y1="305" x2="430" y2="305" stroke="#bdc3c7" stroke-width="1"/>
+    <rect x="70" y="315" width="360" height="52" rx="6" fill="url(#sftGradient)" opacity="0.8"/>
+    <text x="250" y="333" text-anchor="middle" class="content-text">Prompt + Perfect Answer</text>
+    <text x="250" y="348" text-anchor="middle" class="content-bold">(Demonstration)</text>
+    <text x="250" y="362" text-anchor="middle" class="subtitle-text">Human shows the ideal response</text>
+    
+    <!-- Row 3: Goal -->
+    <rect x="50" y="385" width="400" height="95" rx="8" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="2"/>
+    <text x="70" y="405" class="row-label">🎯 Goal</text>
+    <line x1="70" y1="410" x2="430" y2="410" stroke="#bdc3c7" stroke-width="1"/>
+    <rect x="70" y="420" width="360" height="52" rx="6" fill="url(#sftGradient)" opacity="0.8"/>
+    <text x="250" y="438" text-anchor="middle" class="content-text">Learn format and facts</text>
+    <text x="250" y="453" text-anchor="middle" class="content-bold">Instruction Following</text>
+    <text x="250" y="467" text-anchor="middle" class="subtitle-text">Match the expected output structure</text>
+    
+    <!-- Row 4: Signal -->
+    <rect x="50" y="490" width="400" height="95" rx="8" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="2"/>
+    <text x="70" y="510" class="row-label">📊 Signal</text>
+    <line x1="70" y1="515" x2="430" y2="515" stroke="#bdc3c7" stroke-width="1"/>
+    <rect x="70" y="525" width="360" height="52" rx="6" fill="url(#sftGradient)" opacity="0.8"/>
+    <text x="250" y="543" text-anchor="middle" class="content-bold">Exact Token Matching</text>
+    <text x="250" y="558" text-anchor="middle" class="subtitle-text">Loss = difference from target text</text>
+    <text x="250" y="572" text-anchor="middle" style="font-size: 9px; fill: white;">Precise but rigid learning signal</text>
+  </g>
+  
+  <!-- Right Column: RLHF -->
+  <g>
+    <!-- Header -->
+    <rect x="550" y="100" width="400" height="70" rx="10" fill="url(#rlhfGradient)" stroke="#1e8449" stroke-width="4"/>
+    <text x="750" y="125" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 12px; fill: white; font-weight: bold; letter-spacing: 2px;">APPROACH 2</text>
+    <text x="750" y="150" text-anchor="middle" class="column-title">RLHF (PPO)</text>
+    <text x="750" y="165" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">Reinforcement Learning from Human Feedback</text>
+    
+    <!-- Row 1: Method -->
+    <rect x="550" y="190" width="400" height="80" rx="8" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="2"/>
+    <text x="570" y="210" class="row-label">🎓 Method</text>
+    <line x1="570" y1="215" x2="930" y2="215" stroke="#bdc3c7" stroke-width="1"/>
+    <rect x="570" y="225" width="360" height="38" rx="6" fill="url(#rlhfGradient)" opacity="0.8"/>
+    <text x="750" y="245" text-anchor="middle" class="content-bold">"Get a Better Grade"</text>
+    <text x="750" y="258" text-anchor="middle" class="subtitle-text">Learn by optimization</text>
+    
+    <!-- Row 2: Data -->
+    <rect x="550" y="280" width="400" height="95" rx="8" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="2"/>
+    <text x="570" y="300" class="row-label">💾 Data</text>
+    <line x1="570" y1="305" x2="930" y2="305" stroke="#bdc3c7" stroke-width="1"/>
+    <rect x="570" y="315" width="360" height="52" rx="6" fill="url(#rlhfGradient)" opacity="0.8"/>
+    <text x="750" y="333" text-anchor="middle" class="content-text">Prompt + Ranked Answers</text>
+    <text x="750" y="348" text-anchor="middle" class="content-bold">(Comparison)</text>
+    <text x="750" y="362" text-anchor="middle" class="subtitle-text">Human ranks: A &gt; C &gt; B</text>
+    
+    <!-- Row 3: Goal -->
+    <rect x="550" y="385" width="400" height="95" rx="8" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="2"/>
+    <text x="570" y="405" class="row-label">🎯 Goal</text>
+    <line x1="570" y1="410" x2="930" y2="410" stroke="#bdc3c7" stroke-width="1"/>
+    <rect x="570" y="420" width="360" height="52" rx="6" fill="url(#rlhfGradient)" opacity="0.8"/>
+    <text x="750" y="435" text-anchor="middle" class="content-text">Learn preference,</text>
+    <text x="750" y="450" text-anchor="middle" class="content-text">safety, and nuance</text>
+    <text x="750" y="467" text-anchor="middle" class="subtitle-text">Align with human values</text>
+    
+    <!-- Row 4: Signal -->
+    <rect x="550" y="490" width="400" height="95" rx="8" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="2"/>
+    <text x="570" y="510" class="row-label">📊 Signal</text>
+    <line x1="570" y1="515" x2="930" y2="515" stroke="#bdc3c7" stroke-width="1"/>
+    <rect x="570" y="525" width="360" height="52" rx="6" fill="url(#rlhfGradient)" opacity="0.8"/>
+    <text x="750" y="543" text-anchor="middle" class="content-bold">Scalar Reward Score</text>
+    <text x="750" y="558" text-anchor="middle" class="subtitle-text">Reward = quality rating (0-10)</text>
+    <text x="750" y="572" text-anchor="middle" style="font-size: 9px; fill: white;">Flexible holistic evaluation</text>
+  </g>
+  
+  <!-- Bottom note -->
+  <rect x="50" y="590" width="900" height="5" rx="2" fill="#3498db"/>
+  <text x="500" y="588" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: #2c3e50; font-weight: bold;">💡 Key Insight: Both methods are needed! SFT teaches "how to chat", RLHF teaches "how to be helpful and safe"</text>
+</svg>

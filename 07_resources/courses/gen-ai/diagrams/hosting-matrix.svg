@@ -1,0 +1,78 @@
+<svg width="800" height="700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="700" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-size="22" font-weight="bold" fill="#212121">Model Hosting Strategies</text>
+  <text x="400" y="58" text-anchor="middle" font-size="14" fill="#666">Control/Complexity vs. Ease/Speed Trade-offs</text>
+  
+  <!-- Grid Background Quadrants -->
+  <!-- Top Left: Low Control, High Ease -->
+  <rect x="100" y="100" width="300" height="250" fill="#e8f5e9" opacity="0.5"/>
+  <!-- Top Right: High Control, High Ease -->
+  <rect x="400" y="100" width="300" height="250" fill="#fff9c4" opacity="0.5"/>
+  <!-- Bottom Left: Low Control, Low Ease -->
+  <rect x="100" y="350" width="300" height="250" fill="#ffebee" opacity="0.5"/>
+  <!-- Bottom Right: High Control, Low Ease -->
+  <rect x="400" y="350" width="300" height="250" fill="#e3f2fd" opacity="0.5"/>
+  
+  <!-- Axes -->
+  <defs>
+    <marker id="arrowhead-axis" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <polygon points="0 0, 10 5, 0 10" fill="#424242"/>
+    </marker>
+  </defs>
+  
+  <!-- Y-axis (Ease/Speed) -->
+  <line x1="100" y1="600" x2="100" y2="80" stroke="#424242" stroke-width="3" marker-end="url(#arrowhead-axis)"/>
+  <text x="50" y="230" text-anchor="middle" font-size="16" font-weight="bold" fill="#424242" transform="rotate(-90 50 230)">Ease / Speed</text>
+  <text x="85" y="120" text-anchor="end" font-size="13" fill="#424242">High</text>
+  <text x="85" y="590" text-anchor="end" font-size="13" fill="#424242">Low</text>
+  
+  <!-- X-axis (Control/Complexity) -->
+  <line x1="100" y1="600" x2="720" y2="600" stroke="#424242" stroke-width="3" marker-end="url(#arrowhead-axis)"/>
+  <text x="410" y="645" text-anchor="middle" font-size="16" font-weight="bold" fill="#424242">Control / Complexity</text>
+  <text x="120" y="620" font-size="13" fill="#424242">Low</text>
+  <text x="680" y="620" font-size="13" fill="#424242">High</text>
+  
+  <!-- Center dividing lines -->
+  <line x1="400" y1="100" x2="400" y2="600" stroke="#9e9e9e" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="100" y1="350" x2="700" y2="350" stroke="#9e9e9e" stroke-width="1" stroke-dasharray="5,5"/>
+  
+  <!-- Strategy 1: Proprietary API (Top Left - High Ease, Low Control) -->
+  <circle cx="230" cy="180" r="80" fill="#4caf50" opacity="0.8" stroke="#2e7d32" stroke-width="3"/>
+  <text x="230" y="165" text-anchor="middle" font-size="15" font-weight="bold" fill="white">Proprietary API</text>
+  <text x="230" y="185" text-anchor="middle" font-size="12" fill="white">(OpenAI/Anthropic)</text>
+  <text x="230" y="205" text-anchor="middle" font-size="11" fill="white" font-style="italic">Data leaves environment</text>
+  
+  <!-- Strategy 2: Managed Hosting (Center - Medium/Medium) -->
+  <circle cx="400" cy="280" r="80" fill="#ff9800" opacity="0.8" stroke="#e65100" stroke-width="3"/>
+  <text x="400" y="265" text-anchor="middle" font-size="15" font-weight="bold" fill="white">Managed Hosting</text>
+  <text x="400" y="285" text-anchor="middle" font-size="12" fill="white">(Replicate/Fireworks)</text>
+  <text x="400" y="305" text-anchor="middle" font-size="11" fill="white" font-style="italic">Serverless open weights</text>
+  
+  <!-- Strategy 3: Self-Hosted (Bottom Right - High Control, Low Ease) -->
+  <circle cx="570" cy="480" r="80" fill="#2196f3" opacity="0.8" stroke="#1565c0" stroke-width="3"/>
+  <text x="570" y="465" text-anchor="middle" font-size="15" font-weight="bold" fill="white">Self-Hosted</text>
+  <text x="570" y="485" text-anchor="middle" font-size="12" fill="white">(AWS/RunPod)</text>
+  <text x="570" y="505" text-anchor="middle" font-size="11" fill="white" font-style="italic">Manage GPU scaling</text>
+  
+  <!-- Strategy 4: Local (Bottom Left - Low Control, Low Ease but with Privacy) -->
+  <circle cx="230" cy="480" r="80" fill="#9c27b0" opacity="0.8" stroke="#6a1b9a" stroke-width="3"/>
+  <text x="230" y="465" text-anchor="middle" font-size="15" font-weight="bold" fill="white">Local</text>
+  <text x="230" y="485" text-anchor="middle" font-size="12" fill="white">(Ollama/LM Studio)</text>
+  <text x="230" y="505" text-anchor="middle" font-size="11" fill="white" font-style="italic">Privacy + Limited Power</text>
+  
+  <!-- Quadrant Labels (subtle) -->
+  <text x="250" y="130" text-anchor="middle" font-size="12" fill="#2e7d32" font-weight="bold" opacity="0.7">Easy to Use</text>
+  <text x="250" y="145" text-anchor="middle" font-size="11" fill="#2e7d32" opacity="0.6">Less Control</text>
+  
+  <text x="550" y="130" text-anchor="middle" font-size="12" fill="#f57f00" font-weight="bold" opacity="0.7">More Complex</text>
+  <text x="550" y="145" text-anchor="middle" font-size="11" fill="#f57f00" opacity="0.6">More Control</text>
+  
+  <text x="250" y="575" text-anchor="middle" font-size="12" fill="#6a1b9a" font-weight="bold" opacity="0.7">Limited Capability</text>
+  <text x="250" y="590" text-anchor="middle" font-size="11" fill="#6a1b9a" opacity="0.6">High Privacy</text>
+  
+  <text x="550" y="575" text-anchor="middle" font-size="12" fill="#1565c0" font-weight="bold" opacity="0.7">Full Control</text>
+  <text x="550" y="590" text-anchor="middle" font-size="11" fill="#1565c0" opacity="0.6">High Complexity</text>
+</svg>

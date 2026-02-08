@@ -1,0 +1,79 @@
+<svg width="900" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="500" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-size="24" font-weight="bold" fill="#212121">LLM Evaluation Approaches</text>
+  <text x="450" y="58" text-anchor="middle" font-size="14" fill="#666">Two Complementary Methods for Assessing Model Performance</text>
+  
+  <!-- Dividing Line -->
+  <line x1="450" y1="85" x2="450" y2="480" stroke="#9e9e9e" stroke-width="3" stroke-dasharray="10,5"/>
+  
+  <!-- LEFT SIDE: The Lab (Benchmarks) -->
+  <rect x="50" y="90" width="350" height="380" fill="#e3f2fd" rx="15" stroke="#1976d2" stroke-width="3"/>
+  
+  <!-- Icon: Checklist -->
+  <g transform="translate(125, 120)">
+    <rect x="0" y="0" width="80" height="100" fill="white" stroke="#1976d2" stroke-width="3" rx="5"/>
+    <!-- Checkmarks -->
+    <polyline points="15,25 25,35 45,15" fill="none" stroke="#4caf50" stroke-width="4" stroke-linecap="round"/>
+    <polyline points="15,50 25,60 45,40" fill="none" stroke="#4caf50" stroke-width="4" stroke-linecap="round"/>
+    <polyline points="15,75 25,85 45,65" fill="none" stroke="#4caf50" stroke-width="4" stroke-linecap="round"/>
+    <!-- Lines -->
+    <line x1="50" y1="25" x2="70" y2="25" stroke="#757575" stroke-width="2"/>
+    <line x1="50" y1="50" x2="70" y2="50" stroke="#757575" stroke-width="2"/>
+    <line x1="50" y1="75" x2="70" y2="75" stroke="#757575" stroke-width="2"/>
+  </g>
+  
+  <!-- Lab Title -->
+  <text x="225" y="265" text-anchor="middle" font-size="22" font-weight="bold" fill="#1976d2">The Lab</text>
+  <text x="225" y="288" text-anchor="middle" font-size="18" font-weight="600" fill="#424242">(Benchmarks)</text>
+  
+  <!-- Lab Description -->
+  <text x="225" y="325" text-anchor="middle" font-size="15" font-weight="bold" fill="#212121">Standardized Tests</text>
+  
+  <text x="225" y="355" text-anchor="middle" font-size="13" fill="#424242">Examples:</text>
+  <text x="225" y="375" text-anchor="middle" font-size="12" fill="#555">• MMLU (knowledge)</text>
+  <text x="225" y="393" text-anchor="middle" font-size="12" fill="#555">• HumanEval (coding)</text>
+  
+  <text x="225" y="425" text-anchor="middle" font-size="13" font-weight="600" fill="#1976d2">✓ Reproducible</text>
+  <text x="225" y="445" text-anchor="middle" font-size="13" font-weight="600" fill="#1976d2">✓ Objective</text>
+  
+  <!-- RIGHT SIDE: The Wild (LMArena) -->
+  <rect x="500" y="90" width="350" height="380" fill="#fff3e0" rx="15" stroke="#f57c00" stroke-width="3"/>
+  
+  <!-- Icon: Boxing Ring/Voting Booth -->
+  <g transform="translate(625, 120)">
+    <!-- Boxing ring -->
+    <rect x="0" y="30" width="80" height="60" fill="#ffccbc" stroke="#d84315" stroke-width="3" rx="5"/>
+    <!-- Ropes -->
+    <line x1="0" y1="45" x2="80" y2="45" stroke="#d84315" stroke-width="2"/>
+    <line x1="0" y1="60" x2="80" y2="60" stroke="#d84315" stroke-width="2"/>
+    <line x1="0" y1="75" x2="80" y2="75" stroke="#d84315" stroke-width="2"/>
+    <!-- VS text -->
+    <text x="40" y="68" text-anchor="middle" font-size="20" font-weight="bold" fill="#d84315">VS</text>
+    <!-- Corner posts -->
+    <circle cx="10" cy="35" r="5" fill="#d84315"/>
+    <circle cx="70" cy="35" r="5" fill="#d84315"/>
+    <!-- Trophy/Winner indicator -->
+    <path d="M 30,10 L 35,0 L 40,10 L 50,10 L 45,20 L 40,30 L 35,30 L 30,20 Z" fill="#ffd700" stroke="#ff6f00" stroke-width="2"/>
+  </g>
+  
+  <!-- Wild Title -->
+  <text x="675" y="265" text-anchor="middle" font-size="22" font-weight="bold" fill="#f57c00">The Wild</text>
+  <text x="675" y="288" text-anchor="middle" font-size="18" font-weight="600" fill="#424242">(LMArena)</text>
+  
+  <!-- Wild Description -->
+  <text x="675" y="325" text-anchor="middle" font-size="15" font-weight="bold" fill="#212121">Head-to-Head Battles</text>
+  
+  <text x="675" y="355" text-anchor="middle" font-size="13" fill="#424242">Humans vote on better response</text>
+  
+  <text x="675" y="385" text-anchor="middle" font-size="12" fill="#555">Captures:</text>
+  <text x="675" y="403" text-anchor="middle" font-size="12" fill="#555">• "Vibes" &amp; fluency</text>
+  <text x="675" y="421" text-anchor="middle" font-size="12" fill="#555">• Helpfulness</text>
+  
+  <text x="675" y="450" text-anchor="middle" font-size="13" font-weight="600" fill="#f57c00">★ Real-world preference</text>
+  
+  <!-- Bottom note -->
+  <text x="450" y="492" text-anchor="middle" font-size="12" font-style="italic" fill="#757575">Both methods provide valuable insights into model capabilities</text>
+</svg>

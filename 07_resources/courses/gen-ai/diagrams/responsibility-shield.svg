@@ -1,0 +1,90 @@
+<svg width="800" height="700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="700" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-size="24" font-weight="bold" fill="#212121">The Shield of Responsibility</text>
+  <text x="400" y="58" text-anchor="middle" font-size="14" fill="#666">Four Pillars of Responsible AI</text>
+  
+  <!-- Shield outline -->
+  <defs>
+    <clipPath id="shield-clip">
+      <path d="M 400,100 L 650,150 L 650,400 Q 650,550 400,620 Q 150,550 150,400 L 150,150 Z"/>
+    </clipPath>
+  </defs>
+  
+  <!-- Main shield shape -->
+  <path d="M 400,100 L 650,150 L 650,400 Q 650,550 400,620 Q 150,550 150,400 L 150,150 Z" 
+        fill="#ffffff" stroke="#424242" stroke-width="4"/>
+  
+  <!-- Dividing lines (cross pattern) -->
+  <line x1="400" y1="150" x2="400" y2="600" stroke="#424242" stroke-width="3"/>
+  <line x1="175" y1="360" x2="625" y2="360" stroke="#424242" stroke-width="3"/>
+  
+  <!-- Quadrant 1: Copyright & IP (Top Left) -->
+  <g id="copyright">
+    <rect x="175" y="160" width="210" height="185" fill="#e3f2fd" opacity="0.8"/>
+    <text x="280" y="195" text-anchor="middle" font-size="18" font-weight="bold" fill="#1565c0">⚖️ Copyright &amp; IP</text>
+    
+    <text x="280" y="225" text-anchor="middle" font-size="12" font-weight="600" fill="#212121">Who owns AI art?</text>
+    
+    <text x="190" y="250" font-size="11" fill="#424242">Examples:</text>
+    <text x="190" y="270" font-size="10" fill="#555">• NYT vs. OpenAI</text>
+    <text x="190" y="287" font-size="10" fill="#555">  lawsuits</text>
+    <text x="190" y="304" font-size="10" fill="#555">• Training data rights</text>
+    <text x="190" y="321" font-size="10" fill="#555">• Model output ownership</text>
+  </g>
+  
+  <!-- Quadrant 2: Bias & Fairness (Top Right) -->
+  <g id="bias">
+    <rect x="415" y="160" width="210" height="185" fill="#fff3e0" opacity="0.8"/>
+    <text x="520" y="195" text-anchor="middle" font-size="18" font-weight="bold" fill="#e65100">👥 Bias &amp; Fairness</text>
+    
+    <text x="520" y="225" text-anchor="middle" font-size="12" font-weight="600" fill="#212121">Prevent discrimination</text>
+    
+    <text x="430" y="250" font-size="11" fill="#424242">Examples:</text>
+    <text x="430" y="270" font-size="10" fill="#555">• Hiring algorithms</text>
+    <text x="430" y="287" font-size="10" fill="#555">• Facial recognition</text>
+    <text x="430" y="304" font-size="10" fill="#555">• Loan approvals</text>
+    <text x="430" y="321" font-size="10" fill="#555">• Criminal justice</text>
+  </g>
+  
+  <!-- Quadrant 3: Authenticity (Bottom Left) -->
+  <g id="authenticity">
+    <rect x="175" y="375" width="210" height="195" fill="#f3e5f5" opacity="0.8"/>
+    <text x="280" y="410" text-anchor="middle" font-size="18" font-weight="bold" fill="#6a1b9a">🎭 Authenticity</text>
+    
+    <text x="280" y="440" text-anchor="middle" font-size="12" font-weight="600" fill="#212121">Combat misinformation</text>
+    
+    <text x="190" y="465" font-size="11" fill="#424242">Examples:</text>
+    <text x="190" y="485" font-size="10" fill="#555">• Deepfakes</text>
+    <text x="190" y="502" font-size="10" fill="#555">• Synthetic media</text>
+    <text x="190" y="519" font-size="10" fill="#555">• Bot detection</text>
+    <text x="190" y="536" font-size="10" fill="#555">• Content provenance</text>
+  </g>
+  
+  <!-- Quadrant 4: Privacy (Bottom Right) -->
+  <g id="privacy">
+    <rect x="415" y="375" width="210" height="195" fill="#e8f5e9" opacity="0.8"/>
+    <text x="520" y="410" text-anchor="middle" font-size="18" font-weight="bold" fill="#2e7d32">🔒 Privacy</text>
+    
+    <text x="520" y="440" text-anchor="middle" font-size="12" font-weight="600" fill="#212121">Protect personal data</text>
+    
+    <text x="430" y="465" font-size="11" fill="#424242">Examples:</text>
+    <text x="430" y="485" font-size="10" fill="#555">• PII protection</text>
+    <text x="430" y="502" font-size="10" fill="#555">• GDPR compliance</text>
+    <text x="430" y="519" font-size="10" fill="#555">• HIPAA requirements</text>
+    <text x="430" y="536" font-size="10" fill="#555">• Data minimization</text>
+  </g>
+  
+  <!-- Shield border (redrawn on top for clean appearance) -->
+  <path d="M 400,100 L 650,150 L 650,400 Q 650,550 400,620 Q 150,550 150,400 L 150,150 Z" 
+        fill="none" stroke="#424242" stroke-width="4"/>
+  
+  <!-- Center emblem -->
+  <circle cx="400" cy="360" r="35" fill="#ffffff" stroke="#424242" stroke-width="3"/>
+  <text x="400" y="370" text-anchor="middle" font-size="28" fill="#424242">⚡</text>
+  
+  <!-- Bottom note -->
+  <text x="400" y="665" text-anchor="middle" font-size="12" font-style="italic" fill="#757575">All four pillars are essential for responsible AI deployment</text>
+</svg>

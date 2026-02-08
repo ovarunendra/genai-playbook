@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600">
+  <defs>
+    <style>
+      .main-title { font-family: Arial, sans-serif; font-size: 26px; font-weight: bold; fill: #2c3e50; }
+      .side-title { font-family: Arial, sans-serif; font-size: 20px; fill: white; font-weight: bold; }
+      .benefit-text { font-family: Arial, sans-serif; font-size: 12px; fill: white; font-weight: bold; }
+      .detail-text { font-family: Arial, sans-serif; font-size: 10px; fill: white; }
+      .limit-text { font-family: Arial, sans-serif; font-size: 11px; fill: #e74c3c; font-weight: bold; }
+    </style>
+    <linearGradient id="slmPanGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2ecc71;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#27ae60;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="llmPanGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Title -->
+  <text x="500" y="35" text-anchor="middle" class="main-title">SLM vs. LLM: The Trade-off</text>
+  <text x="500" y="58" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; fill: #7f8c8d; font-style: italic;">Choosing the right model for your constraints</text>
+  
+  <!-- Balance fulcrum/stand -->
+  <g>
+    <!-- Base -->
+    <rect x="420" y="500" width="160" height="20" rx="5" fill="#34495e"/>
+    <!-- Post -->
+    <rect x="485" y="300" width="30" height="200" rx="5" fill="#34495e"/>
+    <!-- Triangle fulcrum -->
+    <polygon points="500,300 450,330 550,330" fill="#2c3e50"/>
+  </g>
+  
+  <!-- Balance beam -->
+  <rect x="100" y="290" width="800" height="20" rx="10" fill="#95a5a6" stroke="#7f8c8d" stroke-width="2"/>
+  
+  <!-- Left chain (SLM) -->
+  <line x1="200" y1="300" x2="200" y2="200" stroke="#7f8c8d" stroke-width="3"/>
+  <line x1="195" y1="300" x2="195" y2="200" stroke="#7f8c8d" stroke-width="3"/>
+  <line x1="205" y1="300" x2="205" y2="200" stroke="#7f8c8d" stroke-width="3"/>
+  
+  <!-- Right chain (LLM) -->
+  <line x1="800" y1="300" x2="800" y2="200" stroke="#7f8c8d" stroke-width="3"/>
+  <line x1="795" y1="300" x2="795" y2="200" stroke="#7f8c8d" stroke-width="3"/>
+  <line x1="805" y1="300" x2="805" y2="200" stroke="#7f8c8d" stroke-width="3"/>
+  
+  <!-- Left Pan: SLM -->
+  <g>
+    <!-- Pan -->
+    <ellipse cx="200" cy="200" rx="180" ry="20" fill="#95a5a6" stroke="#7f8c8d" stroke-width="3"/>
+    <rect x="20" y="95" width="360" height="105" rx="12" fill="url(#slmPanGradient)" stroke="#1e8449" stroke-width="4"/>
+    
+    <!-- Icon -->
+    <circle cx="70" cy="130" r="25" fill="#27ae60" opacity="0.5"/>
+    <text x="70" y="143" text-anchor="middle" style="font-size: 35px;">📱</text>
+    
+    <!-- Header -->
+    <text x="200" y="125" text-anchor="middle" class="side-title">SLM</text>
+    <text x="200" y="143" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">Small Language Models</text>
+    <line x1="40" y1="150" x2="360" y2="150" stroke="white" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Benefits -->
+    <text x="40" y="168" class="benefit-text">✅ Privacy (runs locally)</text>
+    <text x="40" y="182" class="benefit-text">✅ Low Cost (no API fees)</text>
+    <text x="40" y="196" class="benefit-text">✅ Fast Speed (no network latency)</text>
+    
+    <!-- Weight indicator -->
+    <rect x="240" y="115" width="130" height="22" rx="6" fill="#1e8449" opacity="0.7"/>
+    <text x="305" y="131" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: white; font-weight: bold;">1-7B params</text>
+  </g>
+  
+  <!-- Right Pan: LLM -->
+  <g>
+    <!-- Pan -->
+    <ellipse cx="800" cy="200" rx="180" ry="20" fill="#95a5a6" stroke="#7f8c8d" stroke-width="3"/>
+    <rect x="620" y="95" width="360" height="105" rx="12" fill="url(#llmPanGradient)" stroke="#2471a3" stroke-width="4"/>
+    
+    <!-- Icon -->
+    <circle cx="670" cy="130" r="25" fill="#2980b9" opacity="0.5"/>
+    <text x="670" y="143" text-anchor="middle" style="font-size: 35px;">☁️</text>
+    
+    <!-- Header -->
+    <text x="800" y="125" text-anchor="middle" class="side-title">LLM</text>
+    <text x="800" y="143" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">Large Language Models</text>
+    <line x1="640" y1="150" x2="960" y2="150" stroke="white" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Benefits -->
+    <text x="640" y="168" class="benefit-text">✅ Complex Reasoning</text>
+    <text x="640" y="182" class="benefit-text">✅ General Knowledge</text>
+    <text x="640" y="196" class="benefit-text">✅ Higher Accuracy</text>
+    
+    <!-- Weight indicator -->
+    <rect x="720" y="115" width="150" height="22" rx="6" fill="#2471a3" opacity="0.7"/>
+    <text x="795" y="131" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: white; font-weight: bold;">70B-400B+ params</text>
+  </g>
+  
+  <!-- Limit boxes below each pan -->
+  <g>
+    <!-- SLM Limit -->
+    <rect x="50" y="220" width="300" height="60" rx="8" fill="#ecf0f1" stroke="#e74c3c" stroke-width="3" stroke-dasharray="5,5"/>
+    <text x="200" y="240" text-anchor="middle" class="limit-text">⚠️ LIMIT:</text>
+    <text x="200" y="257" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 12px; fill: #2c3e50;">Weaker reasoning abilities</text>
+    <text x="200" y="272" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #7f8c8d;">Best for simple, focused tasks</text>
+    
+    <!-- LLM Limit -->
+    <rect x="650" y="220" width="300" height="60" rx="8" fill="#ecf0f1" stroke="#e74c3c" stroke-width="3" stroke-dasharray="5,5"/>
+    <text x="800" y="240" text-anchor="middle" class="limit-text">⚠️ LIMIT:</text>
+    <text x="800" y="257" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 12px; fill: #2c3e50;">High cost, requires cloud/GPUs</text>
+    <text x="800" y="272" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #7f8c8d;">Slower, more expensive per request</text>
+  </g>
+  
+  <!-- Use case examples at bottom -->
+  <g>
+    <rect x="50" y="360" width="900" height="120" rx="10" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="2"/>
+    
+    <text x="500" y="385" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 16px; fill: #2c3e50; font-weight: bold;">📋 Decision Guide</text>
+    <line x1="70" y1="392" x2="930" y2="392" stroke="#bdc3c7" stroke-width="1"/>
+    
+    <!-- Left column: Choose SLM -->
+    <rect x="70" y="405" width="400" height="60" rx="6" fill="#d5f4e6" stroke="#27ae60" stroke-width="2"/>
+    <text x="270" y="422" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 12px; fill: #27ae60; font-weight: bold;">Choose SLM when:</text>
+    <text x="270" y="438" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #2c3e50;">• Privacy is critical (healthcare, finance)</text>
+    <text x="270" y="451" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #2c3e50;">• Edge deployment (mobile, IoT, offline apps)</text>
+    
+    <!-- Right column: Choose LLM -->
+    <rect x="530" y="405" width="400" height="60" rx="6" fill="#d6eaf8" stroke="#2980b9" stroke-width="2"/>
+    <text x="730" y="422" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 12px; fill: #2980b9; font-weight: bold;">Choose LLM when:</text>
+    <text x="730" y="438" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #2c3e50;">• Complex reasoning required (research, analysis)</text>
+    <text x="730" y="451" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #2c3e50;">• Broad knowledge needed (general Q&amp;A, support)</text>
+  </g>
+  
+  <!-- Bottom note -->
+  <rect x="50" y="500" width="900" height="30" rx="8" fill="#34495e"/>
+  <text x="500" y="520" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 13px; fill: white; font-weight: bold;">⚖️ The key is balance: Match the model size to your actual requirements</text>
+</svg>

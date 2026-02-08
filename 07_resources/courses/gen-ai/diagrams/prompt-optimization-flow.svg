@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+  <defs>
+    <style>
+      .step-box { stroke: #2c3e50; stroke-width: 2; }
+      .step-1 { fill: #3498db; }
+      .step-2 { fill: #9b59b6; }
+      .step-3 { fill: #2ecc71; }
+      .text-title { font-family: Arial, sans-serif; font-size: 16px; fill: white; font-weight: bold; text-anchor: middle; }
+      .text-content { font-family: Arial, sans-serif; font-size: 12px; fill: white; text-anchor: middle; }
+      .text-example { font-family: Arial, sans-serif; font-size: 11px; fill: white; text-anchor: middle; font-style: italic; }
+      .main-title { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #2c3e50; }
+      .arrow { stroke: #2c3e50; stroke-width: 4; fill: none; marker-end: url(#arrowhead); }
+      .label-text { font-family: Arial, sans-serif; font-size: 13px; fill: #2c3e50; font-weight: bold; }
+    </style>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#2c3e50"/>
+    </marker>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5dade2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3498db;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#af7ac5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9b59b6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradient3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#52be80;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2ecc71;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" class="main-title">Prompt Optimization Flow</text>
+  <text x="450" y="58" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 13px; fill: #7f8c8d; font-style: italic;">Using LLM as an Optimizer to craft better prompts</text>
+  
+  <!-- Step 1: Input -->
+  <g>
+    <rect x="40" y="100" width="220" height="200" rx="12" fill="url(#gradient1)" class="step-box"/>
+    <text x="150" y="130" class="text-title">STEP 1: INPUT</text>
+    <line x1="60" y1="140" x2="240" y2="140" stroke="white" stroke-width="1" opacity="0.5"/>
+    
+    <!-- User Task -->
+    <rect x="55" y="150" width="190" height="50" rx="5" fill="#2c3e50" opacity="0.3"/>
+    <text x="150" y="167" class="text-content" style="font-size: 11px; font-weight: bold;">User Task:</text>
+    <text x="150" y="185" class="text-example">"Write a marketing email"</text>
+    
+    <!-- Meta-Prompt -->
+    <rect x="55" y="210" width="190" height="70" rx="5" fill="#2c3e50" opacity="0.3"/>
+    <text x="150" y="227" class="text-content" style="font-size: 11px; font-weight: bold;">Meta-Prompt:</text>
+    <text x="150" y="245" class="text-example">"You are an elite prompt</text>
+    <text x="150" y="260" class="text-example">engineer. Optimize the</text>
+    <text x="150" y="275" class="text-example">following task..."</text>
+  </g>
+  
+  <!-- Arrow 1 -->
+  <path d="M 270 200 L 330 200" class="arrow"/>
+  <text x="300" y="190" class="label-text">Feed into</text>
+  
+  <!-- Step 2: Process -->
+  <g>
+    <rect x="340" y="100" width="220" height="200" rx="12" fill="url(#gradient2)" class="step-box"/>
+    <text x="450" y="130" class="text-title">STEP 2: PROCESS</text>
+    <line x1="360" y1="140" x2="540" y2="140" stroke="white" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Gear icon -->
+    <circle cx="450" cy="180" r="35" fill="#2c3e50" opacity="0.3"/>
+    <text x="450" y="195" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 40px; fill: white;">⚙️</text>
+    
+    <text x="450" y="235" class="text-content" style="font-weight: bold;">LLM Optimizer</text>
+    <text x="450" y="252" class="text-example">Analyzes requirements</text>
+    <text x="450" y="267" class="text-example">Restructures &amp; refines</text>
+    <text x="450" y="282" class="text-example">Adds constraints</text>
+  </g>
+  
+  <!-- Arrow 2 -->
+  <path d="M 570 200 L 630 200" class="arrow"/>
+  <text x="600" y="190" class="label-text">Generates</text>
+  
+  <!-- Step 3: Output -->
+  <g>
+    <rect x="640" y="100" width="220" height="200" rx="12" fill="url(#gradient3)" class="step-box"/>
+    <text x="750" y="130" class="text-title">STEP 3: OUTPUT</text>
+    <line x1="660" y1="140" x2="840" y2="140" stroke="white" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Output template -->
+    <rect x="655" y="150" width="190" height="130" rx="5" fill="#2c3e50" opacity="0.3"/>
+    <text x="750" y="167" class="text-content" style="font-size: 11px; font-weight: bold;">Optimized Template:</text>
+    <text x="750" y="185" class="text-example" style="font-size: 10px;">"You are a professional</text>
+    <text x="750" y="200" class="text-example" style="font-size: 10px;">marketer. Write an email that:</text>
+    <text x="750" y="215" class="text-example" style="font-size: 10px;">• Has clear subject line</text>
+    <text x="750" y="230" class="text-example" style="font-size: 10px;">• Uses professional tone</text>
+    <text x="750" y="245" class="text-example" style="font-size: 10px;">• Includes call-to-action</text>
+    <text x="750" y="260" class="text-example" style="font-size: 10px;">• Max 200 words"</text>
+    <text x="750" y="277" class="text-content" style="font-size: 10px; font-weight: bold;">✓ Reusable template</text>
+  </g>
+  
+  <!-- Benefits Section -->
+  <rect x="40" y="320" width="820" height="65" rx="10" fill="#ecf0f1" stroke="#3498db" stroke-width="2"/>
+  <text x="60" y="343" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #2c3e50;">💡 Benefits of Prompt Optimization:</text>
+  
+  <g transform="translate(60, 350)">
+    <circle cx="5" cy="5" r="4" fill="#2ecc71"/>
+    <text x="15" y="10" style="font-family: Arial, sans-serif; font-size: 11px; fill: #34495e;"><tspan font-weight="bold">Consistency:</tspan> Reduces variability between team members and use cases</text>
+  </g>
+  
+  <g transform="translate(360, 350)">
+    <circle cx="5" cy="5" r="4" fill="#3498db"/>
+    <text x="15" y="10" style="font-family: Arial, sans-serif; font-size: 11px; fill: #34495e;"><tspan font-weight="bold">Scalability:</tspan> Easily adapts to dozens of scenarios</text>
+  </g>
+  
+  <g transform="translate(640, 350)">
+    <circle cx="5" cy="5" r="4" fill="#e67e22"/>
+    <text x="15" y="10" style="font-family: Arial, sans-serif; font-size: 11px; fill: #34495e;"><tspan font-weight="bold">Quality:</tspan> Better structure &amp; constraints</text>
+  </g>
+  
+  <g transform="translate(60, 365)">
+    <text x="0" y="10" style="font-family: Arial, sans-serif; font-size: 10px; fill: #e74c3c; font-weight: bold;">⚠️ Important:</text>
+    <text x="70" y="10" style="font-family: Arial, sans-serif; font-size: 10px; fill: #7f8c8d;">Always test optimized prompts with real inputs to verify safety and accuracy!</text>
+  </g>
+</svg>

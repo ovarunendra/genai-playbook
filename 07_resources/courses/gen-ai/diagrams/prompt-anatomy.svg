@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <style>
+      .puzzle-piece { stroke: #2c3e50; stroke-width: 2; }
+      .piece-1 { fill: #3498db; }
+      .piece-2 { fill: #2ecc71; }
+      .piece-3 { fill: #f39c12; }
+      .piece-4 { fill: #e74c3c; }
+      .text-title { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: white; }
+      .text-desc { font-family: Arial, sans-serif; font-size: 13px; fill: white; }
+      .main-title { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #2c3e50; }
+    </style>
+  </defs>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" class="main-title">The Anatomy of a Prompt</text>
+  
+  <!-- Puzzle Piece 1: Instruction (Top Left) -->
+  <g>
+    <path class="puzzle-piece piece-1" d="
+      M 50 80
+      L 180 80
+      L 180 100
+      Q 190 100, 190 110
+      Q 190 120, 180 120
+      L 180 160
+      L 160 160
+      L 160 170
+      Q 160 180, 150 180
+      Q 140 180, 140 170
+      L 140 160
+      L 50 160
+      Z
+    "/>
+    <text x="115" y="110" text-anchor="middle" class="text-title">INSTRUCTION</text>
+    <text x="115" y="130" text-anchor="middle" class="text-desc">The specific task</text>
+    <text x="115" y="145" text-anchor="middle" class="text-desc">"Write a summary"</text>
+  </g>
+  
+  <!-- Puzzle Piece 2: Context (Top Right) -->
+  <g>
+    <path class="puzzle-piece piece-2" d="
+      M 180 80
+      L 180 100
+      Q 190 100, 190 110
+      Q 190 120, 180 120
+      L 180 160
+      L 310 160
+      L 310 140
+      Q 310 130, 320 130
+      Q 330 130, 330 140
+      L 330 160
+      L 350 160
+      L 350 80
+      Z
+    "/>
+    <text x="265" y="110" text-anchor="middle" class="text-title">CONTEXT</text>
+    <text x="265" y="130" text-anchor="middle" class="text-desc">Background info</text>
+    <text x="265" y="145" text-anchor="middle" class="text-desc">"I am a student..."</text>
+  </g>
+  
+  <!-- Puzzle Piece 3: Input Data (Bottom Left) -->
+  <g>
+    <path class="puzzle-piece piece-3" d="
+      M 50 160
+      L 140 160
+      L 140 170
+      Q 140 180, 150 180
+      Q 160 180, 160 170
+      L 160 160
+      L 180 160
+      L 180 240
+      L 160 240
+      L 160 250
+      Q 160 260, 150 260
+      Q 140 260, 140 250
+      L 140 240
+      L 50 240
+      Z
+    "/>
+    <text x="115" y="190" text-anchor="middle" class="text-title">INPUT DATA</text>
+    <text x="115" y="210" text-anchor="middle" class="text-desc">Content to process</text>
+    <text x="115" y="225" text-anchor="middle" class="text-desc">"Article text..."</text>
+  </g>
+  
+  <!-- Puzzle Piece 4: Output Indicator (Bottom Right) -->
+  <g>
+    <path class="puzzle-piece piece-4" d="
+      M 180 160
+      L 310 160
+      L 310 140
+      Q 310 130, 320 130
+      Q 330 130, 330 140
+      L 330 160
+      L 350 160
+      L 350 240
+      L 160 240
+      L 160 250
+      Q 160 260, 150 260
+      Q 140 260, 140 250
+      L 140 240
+      L 180 240
+      Z
+    "/>
+    <text x="265" y="185" text-anchor="middle" class="text-title">OUTPUT</text>
+    <text x="265" y="200" text-anchor="middle" class="text-title">INDICATOR</text>
+    <text x="265" y="220" text-anchor="middle" class="text-desc">Format requirements</text>
+    <text x="265" y="235" text-anchor="middle" class="text-desc">"5 bullet points..."</text>
+  </g>
+  
+  <!-- Example Prompt Box -->
+  <g>
+    <rect x="420" y="70" width="350" height="250" rx="10" fill="#ecf0f1" stroke="#2c3e50" stroke-width="2"/>
+    <text x="595" y="95" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #2c3e50;">Complete Prompt Example</text>
+    
+    <text x="435" y="120" style="font-family: Arial, sans-serif; font-size: 13px; fill: #2980b9; font-weight: bold;">Instruction:</text>
+    <text x="435" y="138" style="font-family: Arial, sans-serif; font-size: 12px; fill: #34495e;">"Write a summary of the article"</text>
+    
+    <text x="435" y="165" style="font-family: Arial, sans-serif; font-size: 13px; fill: #27ae60; font-weight: bold;">Context:</text>
+    <text x="435" y="183" style="font-family: Arial, sans-serif; font-size: 12px; fill: #34495e;">"I am a 7th grade student preparing</text>
+    <text x="435" y="198" style="font-family: Arial, sans-serif; font-size: 12px; fill: #34495e;">for a science presentation"</text>
+    
+    <text x="435" y="225" style="font-family: Arial, sans-serif; font-size: 13px; fill: #d68910; font-weight: bold;">Input Data:</text>
+    <text x="435" y="243" style="font-family: Arial, sans-serif; font-size: 12px; fill: #34495e;">"&lt;article&gt;Climate change affects...&lt;/article&gt;"</text>
+    
+    <text x="435" y="270" style="font-family: Arial, sans-serif; font-size: 13px; fill: #c0392b; font-weight: bold;">Output Indicator:</text>
+    <text x="435" y="288" style="font-family: Arial, sans-serif; font-size: 12px; fill: #34495e;">"Provide exactly 5 bullet points in</text>
+    <text x="435" y="303" style="font-family: Arial, sans-serif; font-size: 12px; fill: #34495e;">simple language"</text>
+  </g>
+  
+  <!-- Arrow connecting puzzle to example -->
+  <path d="M 370 150 L 410 150" stroke="#95a5a6" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#95a5a6"/>
+    </marker>
+  </defs>
+  
+  <!-- Bottom note -->
+  <text x="400" y="370" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; fill: #7f8c8d; font-style: italic;">
+    All four pieces work together to create an effective prompt
+  </text>
+</svg>

@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 650">
+  <defs>
+    <style>
+      .static-section { fill: #3498db; stroke: #2980b9; stroke-width: 3; }
+      .variable-section { fill: #e67e22; stroke: #d68910; stroke-width: 3; }
+      .text-title { font-family: Arial, sans-serif; font-size: 18px; fill: white; font-weight: bold; text-anchor: middle; }
+      .text-subtitle { font-family: Arial, sans-serif; font-size: 14px; fill: white; font-weight: bold; }
+      .text-item { font-family: Arial, sans-serif; font-size: 13px; fill: white; }
+      .text-example { font-family: Arial, sans-serif; font-size: 11px; fill: rgba(255,255,255,0.8); font-style: italic; }
+      .main-title { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #2c3e50; }
+      .label-badge { font-family: Arial, sans-serif; font-size: 14px; fill: white; font-weight: bold; text-anchor: middle; }
+      .icon { font-size: 30px; }
+    </style>
+    <linearGradient id="staticGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5dade2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3498db;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="variableGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f39c12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e67e22;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" class="main-title">Optimal Prompt Structure for Caching</text>
+  <text x="400" y="58" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 13px; fill: #7f8c8d; font-style: italic;">Organize your prompt to maximize cache hits</text>
+  
+  <!-- Main Prompt Block Container -->
+  <rect x="150" y="90" width="500" height="490" rx="15" fill="none" stroke="#2c3e50" stroke-width="4"/>
+  
+  <!-- TOP SECTION: Static/Cached (Blue) -->
+  <g>
+    <rect x="153" y="93" width="494" height="285" rx="12" fill="url(#staticGradient)" class="static-section"/>
+    
+    <!-- Header -->
+    <text x="400" y="125" class="text-title">📌 STATIC SECTION (CACHED)</text>
+    <line x1="180" y1="135" x2="620" y2="135" stroke="white" stroke-width="2" opacity="0.5"/>
+    
+    <!-- Put this FIRST badge -->
+    <rect x="300" y="145" width="200" height="30" rx="15" fill="#2ecc71" stroke="#27ae60" stroke-width="2"/>
+    <text x="400" y="167" class="label-badge">⬆️ PUT THIS FIRST ⬆️</text>
+    
+    <!-- System Instructions -->
+    <g transform="translate(180, 190)">
+      <circle cx="0" cy="0" r="8" fill="#2ecc71"/>
+      <text x="20" y="5" class="text-subtitle">System Instructions</text>
+      <text x="20" y="22" class="text-example">"You are a helpful customer service agent..."</text>
+    </g>
+    
+    <!-- Examples (Few-Shot) -->
+    <g transform="translate(180, 235)">
+      <circle cx="0" cy="0" r="8" fill="#2ecc71"/>
+      <text x="20" y="5" class="text-subtitle">Examples (Few-Shot)</text>
+      <text x="20" y="22" class="text-example">Example 1: Q: "Where is my order?" A: "Let me check..."</text>
+      <text x="20" y="37" class="text-example">Example 2: Q: "Cancel order" A: "I can help with that..."</text>
+    </g>
+    
+    <!-- Large Context Documents -->
+    <g transform="translate(180, 295)">
+      <circle cx="0" cy="0" r="8" fill="#2ecc71"/>
+      <text x="20" y="5" class="text-subtitle">Large Context Documents</text>
+      <text x="20" y="22" class="text-example">Return Policy: "All items can be returned within 30 days..."</text>
+      <text x="20" y="37" class="text-example">Product Catalog: "SKU-12345: Widget Pro, $99.99..."</text>
+      <text x="20" y="52" class="text-example">FAQ Database: "Q: Shipping costs? A: Free over $50..."</text>
+    </g>
+    
+    <!-- Cache indicator -->
+    <rect x="180" y="353" width="440" height="20" rx="5" fill="#2c3e50" opacity="0.4"/>
+    <text x="400" y="367" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: white; font-weight: bold;">💾 Stored in cache - Reused across requests</text>
+  </g>
+  
+  <!-- Divider -->
+  <line x1="160" y1="400" x2="640" y2="400" stroke="#2c3e50" stroke-width="4" stroke-dasharray="10,5"/>
+  <circle cx="400" cy="400" r="25" fill="#e74c3c" stroke="#c0392b" stroke-width="3"/>
+  <text x="400" y="408" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 16px; fill: white; font-weight: bold;">⚡</text>
+  
+  <!-- BOTTOM SECTION: Variable/Uncached (Orange) -->
+  <g>
+    <rect x="153" y="422" width="494" height="155" rx="12" fill="url(#variableGradient)" class="variable-section"/>
+    
+    <!-- Header -->
+    <text x="400" y="430" class="text-title">🔄 VARIABLE SECTION (NOT CACHED)</text>
+    <line x1="180" y1="440" x2="620" y2="440" stroke="white" stroke-width="2" opacity="0.5"/>
+    
+    <!-- Put this LAST badge -->
+    <rect x="300" y="450" width="200" height="30" rx="15" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+    <text x="400" y="472" class="label-badge">⬇️ PUT THIS LAST ⬇️</text>
+    
+    <!-- User Question -->
+    <g transform="translate(180, 495)">
+      <circle cx="0" cy="0" r="8" fill="#e74c3c"/>
+      <text x="20" y="5" class="text-subtitle">User Question</text>
+      <text x="20" y="22" class="text-example">"What is the status of order #12345?"</text>
+    </g>
+    
+    <!-- Specific Data -->
+    <g transform="translate(180, 535)">
+      <circle cx="0" cy="0" r="8" fill="#e74c3c"/>
+      <text x="20" y="5" class="text-subtitle">Specific Data</text>
+      <text x="20" y="22" class="text-example">Order ID: 12345, Customer: Jane Doe, Date: 2026-01-24</text>
+    </g>
+  </g>
+  
+  <!-- Benefits Box -->
+  <rect x="50" y="590" width="700" height="50" rx="10" fill="#ecf0f1" stroke="#3498db" stroke-width="2"/>
+  <text x="70" y="612" style="font-family: Arial, sans-serif; font-size: 13px; font-weight: bold; fill: #2c3e50;">✅ Why This Structure Works:</text>
+  <text x="70" y="630" style="font-family: Arial, sans-serif; font-size: 11px; fill: #34495e;">Static content at the top gets cached once. Variable content at the bottom changes per request. This maximizes cache hits,</text>
+  <text x="70" y="643" style="font-family: Arial, sans-serif; font-size: 11px; fill: #34495e;">reducing latency by 80% and cost by 75% while keeping responses dynamic and personalized!</text>
+</svg>

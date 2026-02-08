@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550">
+  <defs>
+    <style>
+      .panel-nocache { fill: #e74c3c; stroke: #c0392b; stroke-width: 3; }
+      .panel-cache { fill: #2ecc71; stroke: #27ae60; stroke-width: 3; }
+      .factory-building { fill: #95a5a6; stroke: #7f8c8d; stroke-width: 2; }
+      .vending-machine { fill: #3498db; stroke: #2980b9; stroke-width: 2; }
+      .text-title { font-family: Arial, sans-serif; font-size: 18px; fill: white; font-weight: bold; text-anchor: middle; }
+      .text-label { font-family: Arial, sans-serif; font-size: 14px; fill: #2c3e50; font-weight: bold; text-anchor: middle; }
+      .text-desc { font-family: Arial, sans-serif; font-size: 12px; fill: white; text-anchor: middle; }
+      .main-title { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #2c3e50; }
+      .badge { font-family: Arial, sans-serif; font-size: 13px; fill: white; font-weight: bold; text-anchor: middle; }
+      .icon-text { font-family: Arial, sans-serif; font-size: 40px; text-anchor: middle; }
+    </style>
+  </defs>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" class="main-title">Prompt Caching: Factory vs. Vending Machine</text>
+  <text x="450" y="58" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 13px; fill: #7f8c8d; font-style: italic;">Understanding the performance impact of caching</text>
+  
+  <!-- Left Side: WITHOUT CACHE (Factory) -->
+  <g>
+    <rect x="40" y="90" width="380" height="380" rx="15" class="panel-nocache"/>
+    <text x="230" y="125" class="text-title">❌ WITHOUT CACHE</text>
+    <line x1="60" y1="135" x2="400" y2="135" stroke="white" stroke-width="2" opacity="0.5"/>
+    
+    <!-- Factory Building -->
+    <g transform="translate(110, 160)">
+      <!-- Building structure -->
+      <rect x="0" y="40" width="120" height="100" class="factory-building"/>
+      <rect x="10" y="50" width="25" height="25" fill="#ecf0f1"/>
+      <rect x="45" y="50" width="25" height="25" fill="#ecf0f1"/>
+      <rect x="80" y="50" width="25" height="25" fill="#ecf0f1"/>
+      <rect x="10" y="90" width="25" height="25" fill="#ecf0f1"/>
+      <rect x="45" y="90" width="25" height="25" fill="#ecf0f1"/>
+      <rect x="80" y="90" width="25" height="25" fill="#ecf0f1"/>
+      <rect x="45" y="120" width="30" height="20" fill="#34495e"/>
+      
+      <!-- Roof -->
+      <polygon points="60,20 0,40 120,40" fill="#7f8c8d" stroke="#2c3e50" stroke-width="2"/>
+      
+      <!-- Chimney with smoke -->
+      <rect x="80" y="10" width="15" height="20" fill="#34495e"/>
+      <circle cx="87" cy="5" r="4" fill="#bdc3c7" opacity="0.7"/>
+      <circle cx="92" cy="2" r="5" fill="#bdc3c7" opacity="0.5"/>
+      <circle cx="85" cy="0" r="4" fill="#bdc3c7" opacity="0.4"/>
+      
+      <!-- Gears inside factory -->
+      <text x="60" y="100" class="icon-text" style="font-size: 30px;">⚙️</text>
+    </g>
+    
+    <!-- Process arrows -->
+    <text x="230" y="315" class="text-desc" style="font-size: 11px;">⬇️ Building from scratch ⬇️</text>
+    <text x="230" y="335" class="text-desc" style="font-size: 11px;">Every. Single. Time.</text>
+    
+    <!-- Time/Cost indicators -->
+    <rect x="80" y="360" width="300" height="90" rx="8" fill="#c0392b"/>
+    <text x="230" y="385" class="badge" style="font-size: 16px;">🐌 SLOW &amp; EXPENSIVE</text>
+    <text x="230" y="410" class="text-desc" style="font-size: 12px;">⏱️ High Latency (100%)</text>
+    <text x="230" y="430" class="text-desc" style="font-size: 12px;">💰 Full Processing Cost (100%)</text>
+  </g>
+  
+  <!-- VS Divider -->
+  <line x1="450" y1="90" x2="450" y2="470" stroke="#2c3e50" stroke-width="4"/>
+  <circle cx="450" cy="280" r="30" fill="#f39c12" stroke="#d68910" stroke-width="3"/>
+  <text x="450" y="292" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 18px; fill: white; font-weight: bold;">VS</text>
+  
+  <!-- Right Side: WITH CACHE (Vending Machine) -->
+  <g>
+    <rect x="480" y="90" width="380" height="380" rx="15" class="panel-cache"/>
+    <text x="670" y="125" class="text-title">✅ WITH CACHE</text>
+    <line x1="500" y1="135" x2="840" y2="135" stroke="white" stroke-width="2" opacity="0.5"/>
+    
+    <!-- Vending Machine -->
+    <g transform="translate(560, 160)">
+      <!-- Machine body -->
+      <rect x="0" y="0" width="120" height="160" rx="8" class="vending-machine"/>
+      
+      <!-- Display screen -->
+      <rect x="10" y="10" width="100" height="40" rx="4" fill="#2c3e50"/>
+      <text x="60" y="35" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 12px; fill: #2ecc71; font-weight: bold;">READY</text>
+      
+      <!-- Product slots -->
+      <rect x="10" y="60" width="45" height="35" rx="3" fill="#ecf0f1" stroke="#2c3e50" stroke-width="1"/>
+      <rect x="65" y="60" width="45" height="35" rx="3" fill="#ecf0f1" stroke="#2c3e50" stroke-width="1"/>
+      <rect x="10" y="105" width="45" height="35" rx="3" fill="#ecf0f1" stroke="#2c3e50" stroke-width="1"/>
+      <rect x="65" y="105" width="45" height="35" rx="3" fill="#ecf0f1" stroke="#2c3e50" stroke-width="1"/>
+      
+      <!-- Items in slots -->
+      <text x="32" y="83" text-anchor="middle" style="font-size: 20px;">📦</text>
+      <text x="87" y="83" text-anchor="middle" style="font-size: 20px;">📦</text>
+      <text x="32" y="128" text-anchor="middle" style="font-size: 20px;">📦</text>
+      <text x="87" y="128" text-anchor="middle" style="font-size: 20px;">📦</text>
+      
+      <!-- Dispenser -->
+      <rect x="35" y="145" width="50" height="15" rx="3" fill="#34495e"/>
+      
+      <!-- Item being dispensed -->
+      <text x="60" y="172" text-anchor="middle" style="font-size: 24px;">📦</text>
+    </g>
+    
+    <!-- Process arrows -->
+    <text x="670" y="355" class="text-desc" style="font-size: 11px;">⚡ Instant retrieval ⚡</text>
+    <text x="670" y="375" class="text-desc" style="font-size: 11px;">Pre-computed &amp; ready!</text>
+    
+    <!-- Time/Cost indicators -->
+    <rect x="520" y="390" width="300" height="60" rx="8" fill="#27ae60"/>
+    <text x="670" y="415" class="badge" style="font-size: 16px;">⚡ FAST &amp; CHEAP</text>
+    <text x="670" y="438" class="text-desc" style="font-size: 12px;">⏱️ Latency: -80%  |  💰 Cost: -75%</text>
+  </g>
+  
+  <!-- Bottom explanation -->
+  <rect x="40" y="490" width="820" height="50" rx="10" fill="#ecf0f1" stroke="#3498db" stroke-width="2"/>
+  <text x="60" y="512" style="font-family: Arial, sans-serif; font-size: 13px; font-weight: bold; fill: #2c3e50;">🔑 How Cache Works:</text>
+  <text x="60" y="530" style="font-family: Arial, sans-serif; font-size: 11px; fill: #34495e;">Static prompt parts (system instructions, examples, large context) are stored. On repeat requests with the same prefix, the system</text>
+  <text x="60" y="543" style="font-family: Arial, sans-serif; font-size: 11px; fill: #34495e;">skips re-processing those tokens—like grabbing from a vending machine instead of rebuilding in a factory!</text>
+</svg>

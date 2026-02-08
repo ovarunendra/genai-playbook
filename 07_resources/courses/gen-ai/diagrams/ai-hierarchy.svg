@@ -1,0 +1,32 @@
+<svg width="600" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="600" fill="#f8f9fa"/>
+  
+  <!-- Outer Circle - AI -->
+  <circle cx="300" cy="300" r="250" fill="#e3f2fd" stroke="#1976d2" stroke-width="3"/>
+  <text x="300" y="85" text-anchor="middle" font-size="18" font-weight="bold" fill="#1565c0">Artificial Intelligence</text>
+  <text x="300" y="108" text-anchor="middle" font-size="14" fill="#1565c0">(1950s)</text>
+  <text x="300" y="130" text-anchor="middle" font-size="12" fill="#424242">Mimicking human intelligence</text>
+  
+  <!-- Second Layer - Machine Learning -->
+  <circle cx="300" cy="300" r="190" fill="#c8e6c9" stroke="#388e3c" stroke-width="3"/>
+  <text x="300" y="165" text-anchor="middle" font-size="17" font-weight="bold" fill="#2e7d32">Machine Learning</text>
+  <text x="300" y="186" text-anchor="middle" font-size="13" fill="#2e7d32">(1980s)</text>
+  <text x="300" y="206" text-anchor="middle" font-size="11" fill="#424242">Algorithms that learn from data</text>
+  
+  <!-- Third Layer - Deep Learning -->
+  <circle cx="300" cy="300" r="130" fill="#fff9c4" stroke="#f57f17" stroke-width="3"/>
+  <text x="300" y="235" text-anchor="middle" font-size="16" font-weight="bold" fill="#f57f00">Deep Learning</text>
+  <text x="300" y="254" text-anchor="middle" font-size="12" fill="#f57f00">(2000s)</text>
+  <text x="300" y="274" text-anchor="middle" font-size="10" fill="#424242">Complex pattern recognition</text>
+  <text x="300" y="288" text-anchor="middle" font-size="10" fill="#424242">using neural networks</text>
+  
+  <!-- Inner Core - Generative AI -->
+  <circle cx="300" cy="300" r="70" fill="#ffccbc" stroke="#d84315" stroke-width="3"/>
+  <text x="300" y="305" text-anchor="middle" font-size="15" font-weight="bold" fill="#bf360c">Generative AI</text>
+  <text x="300" y="322" text-anchor="middle" font-size="10" fill="#424242">Models that create</text>
+  <text x="300" y="335" text-anchor="middle" font-size="10" fill="#424242">new content</text>
+  
+  <!-- Title -->
+  <text x="300" y="35" text-anchor="middle" font-size="22" font-weight="bold" fill="#212121">The Evolution of AI</text>
+</svg>

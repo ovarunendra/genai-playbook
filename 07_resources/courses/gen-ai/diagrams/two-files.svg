@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550">
+  <defs>
+    <style>
+      .main-title { font-family: Arial, sans-serif; font-size: 26px; font-weight: bold; fill: #2c3e50; }
+      .file-title { font-family: Arial, sans-serif; font-size: 15px; fill: white; font-weight: bold; }
+      .file-detail { font-family: Arial, sans-serif; font-size: 11px; fill: white; }
+      .file-size { font-family: Arial, sans-serif; font-size: 20px; fill: white; font-weight: bold; }
+      .label-text { font-family: Arial, sans-serif; font-size: 12px; fill: #2c3e50; font-weight: bold; }
+      .code-text { font-family: 'Courier New', monospace; font-size: 10px; fill: white; }
+    </style>
+    <linearGradient id="folderGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5b041;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f39c12;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="parametersGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="runFileGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2ecc71;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#27ae60;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" class="main-title">What's Inside an LLM?</text>
+  <text x="450" y="58" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; fill: #7f8c8d; font-style: italic;">Just two files on your hard drive</text>
+  
+  <!-- Folder -->
+  <g>
+    <!-- Folder tab -->
+    <path d="M 100 100 L 100 90 L 250 90 L 270 110 L 800 110 L 800 100 Z" fill="url(#folderGradient)" stroke="#d68910" stroke-width="2"/>
+    
+    <!-- Folder body -->
+    <rect x="100" y="100" width="700" height="380" rx="5" fill="#f8f9f9" stroke="#d68910" stroke-width="3"/>
+    
+    <!-- Folder label -->
+    <text x="175" y="105" style="font-family: Arial, sans-serif; font-size: 13px; fill: white; font-weight: bold;">📁 llama-2-70b</text>
+  </g>
+  
+  <!-- File 1: Parameters File (LARGE) -->
+  <g>
+    <rect x="140" y="140" width="680" height="180" rx="10" fill="url(#parametersGradient)" stroke="#1f618d" stroke-width="4"/>
+    
+    <!-- File icon -->
+    <g>
+      <rect x="170" y="170" width="80" height="100" rx="5" fill="#2980b9" opacity="0.6"/>
+      <polygon points="250,170 250,195 225,170" fill="#1f618d" opacity="0.6"/>
+      <!-- Binary pattern -->
+      <text x="210" y="200" text-anchor="middle" style="font-family: 'Courier New', monospace; font-size: 9px; fill: white;">010101</text>
+      <text x="210" y="215" text-anchor="middle" style="font-family: 'Courier New', monospace; font-size: 9px; fill: white;">110010</text>
+      <text x="210" y="230" text-anchor="middle" style="font-family: 'Courier New', monospace; font-size: 9px; fill: white;">101110</text>
+      <text x="210" y="245" text-anchor="middle" style="font-family: 'Courier New', monospace; font-size: 9px; fill: white;">011001</text>
+    </g>
+    
+    <!-- Text content -->
+    <text x="280" y="180" class="file-title">1️⃣ PARAMETERS FILE</text>
+    <text x="280" y="200" class="code-text">llama-2-70b.weights.bin</text>
+    
+    <line x1="280" y1="210" x2="790" y2="210" stroke="white" stroke-width="1" opacity="0.5"/>
+    
+    <text x="280" y="230" class="file-detail">Contains: 70 billion floating-point numbers</text>
+    <text x="280" y="248" class="file-detail">Purpose: The "knowledge" and patterns learned from training</text>
+    <text x="280" y="266" class="file-detail">Content: Neural network weights (W₁, W₂, ... W₇₀ᵦ)</text>
+    
+    <!-- Size badge -->
+    <rect x="650" y="275" width="130" height="35" rx="8" fill="#1f618d" opacity="0.8"/>
+    <text x="715" y="298" text-anchor="middle" class="file-size">140 GB</text>
+    
+    <!-- Scale indicator -->
+    <rect x="140" y="330" width="680" height="8" rx="4" fill="#ecf0f1"/>
+    <rect x="140" y="330" width="680" height="8" rx="4" fill="#e74c3c" opacity="0.7"/>
+    <text x="480" y="350" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #c0392b; font-weight: bold;">⚠️ MASSIVE - This is where the model's intelligence lives</text>
+  </g>
+  
+  <!-- File 2: Run File (TINY) -->
+  <g>
+    <rect x="140" y="370" width="320" height="100" rx="10" fill="url(#runFileGradient)" stroke="#1e8449" stroke-width="4"/>
+    
+    <!-- File icon -->
+    <g>
+      <rect x="170" y="395" width="50" height="60" rx="3" fill="#27ae60" opacity="0.6"/>
+      <polygon points="220,395 220,410 205,395" fill="#1e8449" opacity="0.6"/>
+      <!-- Code symbols -->
+      <text x="195" y="415" text-anchor="middle" style="font-family: 'Courier New', monospace; font-size: 12px; fill: white;">&lt;/&gt;</text>
+      <text x="195" y="435" text-anchor="middle" style="font-family: 'Courier New', monospace; font-size: 10px; fill: white;">{  }</text>
+    </g>
+    
+    <!-- Text content -->
+    <text x="240" y="405" class="file-title">2️⃣ RUN FILE</text>
+    <text x="240" y="422" class="code-text">run.c</text>
+    
+    <line x1="240" y1="430" x2="430" y2="430" stroke="white" stroke-width="1" opacity="0.5"/>
+    
+    <text x="240" y="448" class="file-detail">Size: ~500 lines of C code</text>
+    <text x="240" y="463" class="file-detail">Purpose: Executes the neural network</text>
+    
+    <!-- Size badge -->
+    <rect x="360" y="395" width="85" height="28" rx="6" fill="#1e8449" opacity="0.8"/>
+    <text x="402" y="413" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; fill: white; font-weight: bold;">~100 KB</text>
+  </g>
+  
+  <!-- Comparison arrow and text -->
+  <g>
+    <path d="M 480 420 L 620 420" stroke="#7f8c8d" stroke-width="3" stroke-dasharray="5,5"/>
+    <text x="550" y="415" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: #7f8c8d; font-weight: bold;">vs</text>
+    
+    <!-- Info box -->
+    <rect x="490" y="375" width="290" height="90" rx="8" fill="#34495e" stroke="#2c3e50" stroke-width="2"/>
+    <text x="635" y="395" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 12px; fill: white; font-weight: bold;">💡 Key Insight</text>
+    <line x1="510" y1="402" x2="760" y2="402" stroke="white" stroke-width="1" opacity="0.3"/>
+    <text x="635" y="420" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #ecf0f1;">The run file is tiny because</text>
+    <text x="635" y="435" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #ecf0f1;">neural networks are mathematically</text>
+    <text x="635" y="450" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #ecf0f1;">simple: just matrix multiplications!</text>
+  </g>
+  
+  <!-- Bottom explanation -->
+  <rect x="100" y="495" width="700" height="45" rx="8" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="2"/>
+  <text x="450" y="515" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 13px; fill: #2c3e50; font-weight: bold;">That's it! An LLM is just parameters (data) + a simple execution engine (code)</text>
+  <text x="450" y="533" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: #7f8c8d;">The magic isn't in the code—it's in the billions of numbers learned during training</text>
+</svg>

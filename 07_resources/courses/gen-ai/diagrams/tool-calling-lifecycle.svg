@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 750">
+  <defs>
+    <style>
+      .step-box { stroke: #2c3e50; stroke-width: 3; }
+      .step-1 { fill: #3498db; }
+      .step-2 { fill: #9b59b6; }
+      .step-3 { fill: #e67e22; }
+      .step-4 { fill: #f39c12; }
+      .step-5 { fill: #2ecc71; }
+      .text-title { font-family: Arial, sans-serif; font-size: 16px; fill: white; font-weight: bold; }
+      .text-content { font-family: Arial, sans-serif; font-size: 12px; fill: white; }
+      .text-code { font-family: 'Courier New', monospace; font-size: 11px; fill: white; }
+      .main-title { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #2c3e50; }
+      .arrow { stroke: #2c3e50; stroke-width: 4; fill: none; marker-end: url(#arrowhead); }
+      .step-number { font-family: Arial, sans-serif; font-size: 24px; fill: white; font-weight: bold; }
+      .actor-label { font-family: Arial, sans-serif; font-size: 14px; fill: #2c3e50; font-weight: bold; text-anchor: middle; }
+    </style>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#2c3e50"/>
+    </marker>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5dade2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3498db;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#af7ac5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9b59b6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradient3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f39c12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e67e22;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradient4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5b041;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f39c12;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradient5" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#52be80;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2ecc71;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" class="main-title">Tool Calling Lifecycle</text>
+  <text x="400" y="58" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 13px; fill: #7f8c8d; font-style: italic;">The handshake between your app and the LLM</text>
+  
+  <!-- Actors -->
+  <rect x="100" y="80" width="120" height="40" rx="8" fill="#ecf0f1" stroke="#95a5a6" stroke-width="2"/>
+  <text x="160" y="105" class="actor-label">YOUR APP</text>
+  
+  <rect x="580" y="80" width="120" height="40" rx="8" fill="#ecf0f1" stroke="#95a5a6" stroke-width="2"/>
+  <text x="640" y="105" class="actor-label">LLM MODEL</text>
+  
+  <!-- Lifelines -->
+  <line x1="160" y1="120" x2="160" y2="680" stroke="#95a5a6" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="640" y1="120" x2="640" y2="680" stroke="#95a5a6" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Step 1: Define -->
+  <g>
+    <circle cx="50" cy="160" r="22" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+    <text x="50" y="169" text-anchor="middle" class="step-number">1</text>
+    
+    <rect x="180" y="140" width="420" height="80" rx="10" fill="url(#gradient1)" class="step-box"/>
+    <text x="390" y="165" text-anchor="middle" class="text-title">📋 DEFINE</text>
+    <line x1="200" y1="175" x2="580" y2="175" stroke="white" stroke-width="1" opacity="0.5"/>
+    <text x="390" y="195" text-anchor="middle" class="text-content">App sends Prompt + List of Available Tools</text>
+    <text x="390" y="212" text-anchor="middle" class="text-code">tools = [get_weather(), cancel_order(), ...]</text>
+    
+    <path d="M 170 180 L 630 180" class="arrow"/>
+  </g>
+  
+  <!-- Step 2: Decide -->
+  <g>
+    <circle cx="50" cy="280" r="22" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+    <text x="50" y="289" text-anchor="middle" class="step-number">2</text>
+    
+    <rect x="180" y="250" width="420" height="100" rx="10" fill="url(#gradient2)" class="step-box"/>
+    <text x="390" y="275" text-anchor="middle" class="text-title">🤔 DECIDE</text>
+    <line x1="200" y1="285" x2="580" y2="285" stroke="white" stroke-width="1" opacity="0.5"/>
+    <text x="390" y="305" text-anchor="middle" class="text-content">Model analyzes prompt &amp; decides it needs a tool</text>
+    <text x="390" y="323" text-anchor="middle" class="text-content">Returns Tool Call (pauses generation)</text>
+    <text x="390" y="342" text-anchor="middle" class="text-code">get_weather(location="Paris")</text>
+    
+    <path d="M 630 300 L 170 300" class="arrow"/>
+  </g>
+  
+  <!-- Step 3: Execute -->
+  <g>
+    <circle cx="50" cy="420" r="22" fill="#e67e22" stroke="#d68910" stroke-width="2"/>
+    <text x="50" y="429" text-anchor="middle" class="step-number">3</text>
+    
+    <rect x="180" y="380" width="420" height="110" rx="10" fill="url(#gradient3)" class="step-box"/>
+    <text x="390" y="405" text-anchor="middle" class="text-title">⚙️ EXECUTE</text>
+    <line x1="200" y1="415" x2="580" y2="415" stroke="white" stroke-width="1" opacity="0.5"/>
+    <text x="390" y="435" text-anchor="middle" class="text-content">App pauses generation, runs the code</text>
+    <text x="390" y="453" text-anchor="middle" class="text-code">result = weather_api.get("Paris")</text>
+    <text x="390" y="471" text-anchor="middle" class="text-code">→ {"temp": 14, "condition": "cloudy"}</text>
+    
+    <!-- Internal execution box -->
+    <rect x="60" y="400" width="100" height="70" rx="5" fill="#34495e" opacity="0.6"/>
+    <text x="110" y="425" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">Calls</text>
+    <text x="110" y="440" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">External</text>
+    <text x="110" y="455" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: white;">API</text>
+  </g>
+  
+  <!-- Step 4: Return -->
+  <g>
+    <circle cx="50" cy="550" r="22" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+    <text x="50" y="559" text-anchor="middle" class="step-number">4</text>
+    
+    <rect x="180" y="520" width="420" height="90" rx="10" fill="url(#gradient4)" class="step-box"/>
+    <text x="390" y="545" text-anchor="middle" class="text-title">↩️ RETURN</text>
+    <line x1="200" y1="555" x2="580" y2="555" stroke="white" stroke-width="1" opacity="0.5"/>
+    <text x="390" y="575" text-anchor="middle" class="text-content">App sends Tool Output back to Model</text>
+    <text x="390" y="593" text-anchor="middle" class="text-code">tool_output: {"temp": 14, "condition": "cloudy"}</text>
+    
+    <path d="M 170 560 L 630 560" class="arrow"/>
+  </g>
+  
+  <!-- Step 5: Respond -->
+  <g>
+    <circle cx="50" cy="660" r="22" fill="#2ecc71" stroke="#27ae60" stroke-width="2"/>
+    <text x="50" y="669" text-anchor="middle" class="step-number">5</text>
+    
+    <rect x="180" y="630" width="420" height="90" rx="10" fill="url(#gradient5)" class="step-box"/>
+    <text x="390" y="655" text-anchor="middle" class="text-title">💬 RESPOND</text>
+    <line x1="200" y1="665" x2="580" y2="665" stroke="white" stroke-width="1" opacity="0.5"/>
+    <text x="390" y="685" text-anchor="middle" class="text-content">Model generates Final Natural Language Response</text>
+    <text x="390" y="703" text-anchor="middle" class="text-code">"It's 14°C and cloudy in Paris right now."</text>
+    
+    <path d="M 630 670 L 170 670" class="arrow"/>
+  </g>
+  
+  <!-- Bottom note -->
+  <rect x="50" y="730" width="700" height="15" rx="5" fill="#ecf0f1"/>
+  <text x="400" y="741" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 11px; fill: #34495e; font-style: italic;">This multi-step handshake enables LLMs to access external data and take actions in the real world</text>
+</svg>

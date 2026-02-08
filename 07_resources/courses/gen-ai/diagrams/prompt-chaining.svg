@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300">
+  <defs>
+    <style>
+      .stage-box { stroke: #2c3e50; stroke-width: 2; }
+      .stage-1 { fill: #3498db; }
+      .stage-2 { fill: #9b59b6; }
+      .stage-3 { fill: #e67e22; }
+      .stage-4 { fill: #2ecc71; }
+      .text-title { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: white; text-anchor: middle; }
+      .text-desc { font-family: Arial, sans-serif; font-size: 11px; fill: white; text-anchor: middle; }
+      .text-output { font-family: Arial, sans-serif; font-size: 10px; fill: #ffffff; text-anchor: middle; font-style: italic; }
+      .main-title { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #2c3e50; }
+      .arrow { stroke: #2c3e50; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+      .data-flow { font-family: Arial, sans-serif; font-size: 9px; fill: #e74c3c; font-weight: bold; text-anchor: middle; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2c3e50"/>
+    </marker>
+    <linearGradient id="boxGradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5dade2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3498db;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="boxGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#af7ac5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9b59b6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="boxGradient3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f39c12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e67e22;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="boxGradient4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#52be80;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2ecc71;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" class="main-title">Prompt Chaining Workflow</text>
+  <text x="450" y="55" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 13px; fill: #7f8c8d; font-style: italic;">Output of each stage becomes input for the next</text>
+  
+  <!-- Stage 1: Research -->
+  <g>
+    <rect x="40" y="90" width="160" height="120" rx="10" fill="url(#boxGradient1)" class="stage-box"/>
+    <text x="120" y="115" class="text-title">1. RESEARCH</text>
+    <line x1="55" y1="125" x2="185" y2="125" stroke="white" stroke-width="1" opacity="0.5"/>
+    <text x="120" y="145" class="text-desc">Gather information</text>
+    <text x="120" y="160" class="text-desc">on the topic</text>
+    
+    <rect x="55" y="175" width="130" height="25" rx="5" fill="#2c3e50" opacity="0.3"/>
+    <text x="120" y="192" class="text-output">Output: Key facts &amp;</text>
+    <text x="120" y="202" class="text-output">research notes</text>
+  </g>
+  
+  <!-- Arrow 1 -->
+  <path d="M 210 150 L 260 150" class="arrow"/>
+  <text x="235" y="140" class="data-flow">DATA</text>
+  <text x="235" y="148" class="data-flow">FLOWS →</text>
+  
+  <!-- Stage 2: Outline -->
+  <g>
+    <rect x="270" y="90" width="160" height="120" rx="10" fill="url(#boxGradient2)" class="stage-box"/>
+    <text x="350" y="115" class="text-title">2. OUTLINE</text>
+    <line x1="285" y1="125" x2="415" y2="125" stroke="white" stroke-width="1" opacity="0.5"/>
+    <text x="350" y="145" class="text-desc">Structure the</text>
+    <text x="350" y="160" class="text-desc">content logically</text>
+    
+    <rect x="285" y="175" width="130" height="25" rx="5" fill="#2c3e50" opacity="0.3"/>
+    <text x="350" y="192" class="text-output">Output: Organized</text>
+    <text x="350" y="202" class="text-output">outline with sections</text>
+  </g>
+  
+  <!-- Arrow 2 -->
+  <path d="M 440 150 L 490 150" class="arrow"/>
+  <text x="465" y="140" class="data-flow">DATA</text>
+  <text x="465" y="148" class="data-flow">FLOWS →</text>
+  
+  <!-- Stage 3: Draft -->
+  <g>
+    <rect x="500" y="90" width="160" height="120" rx="10" fill="url(#boxGradient3)" class="stage-box"/>
+    <text x="580" y="115" class="text-title">3. DRAFT</text>
+    <line x1="515" y1="125" x2="645" y2="125" stroke="white" stroke-width="1" opacity="0.5"/>
+    <text x="580" y="145" class="text-desc">Write full content</text>
+    <text x="580" y="160" class="text-desc">based on outline</text>
+    
+    <rect x="515" y="175" width="130" height="25" rx="5" fill="#2c3e50" opacity="0.3"/>
+    <text x="580" y="192" class="text-output">Output: Complete</text>
+    <text x="580" y="202" class="text-output">first draft text</text>
+  </g>
+  
+  <!-- Arrow 3 -->
+  <path d="M 670 150 L 720 150" class="arrow"/>
+  <text x="695" y="140" class="data-flow">DATA</text>
+  <text x="695" y="148" class="data-flow">FLOWS →</text>
+  
+  <!-- Stage 4: Edit -->
+  <g>
+    <rect x="730" y="90" width="160" height="120" rx="10" fill="url(#boxGradient4)" class="stage-box"/>
+    <text x="810" y="115" class="text-title">4. EDIT</text>
+    <line x1="745" y1="125" x2="875" y2="125" stroke="white" stroke-width="1" opacity="0.5"/>
+    <text x="810" y="145" class="text-desc">Refine &amp; polish</text>
+    <text x="810" y="160" class="text-desc">for quality</text>
+    
+    <rect x="745" y="175" width="130" height="25" rx="5" fill="#2c3e50" opacity="0.3"/>
+    <text x="810" y="192" class="text-output">Output: Final</text>
+    <text x="810" y="202" class="text-output">polished document</text>
+  </g>
+  
+  <!-- Benefits Box -->
+  <rect x="40" y="235" width="850" height="50" rx="8" fill="#ecf0f1" stroke="#3498db" stroke-width="2"/>
+  <text x="60" y="255" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #2c3e50;">💡 Why Prompt Chaining Works:</text>
+  <text x="60" y="273" style="font-family: Arial, sans-serif; font-size: 11px; fill: #34495e;">• Breaks complex tasks into manageable steps  • Each stage focuses on one specific goal  • Reduces errors through staged validation</text>
+  <text x="60" y="287" style="font-family: Arial, sans-serif; font-size: 11px; fill: #34495e;">• Enables iteration and refinement at each stage  • More control over the final output quality</text>
+</svg>
