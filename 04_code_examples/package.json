@@ -1,0 +1,21 @@
+{
+  "name": "ai-examples",
+  "version": "1.0.0",
+  "description": "Working Node.js examples for AI Agent",
+  "type": "module",
+  "scripts": {
+    "01_basic_agent": "node 01_basic_llm/agents-sdk.js"
+  },
+  "keywords": ["openai", "ai", "agents", "llm", "production"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@openai/agents": "^0.1.0",
+    "openai": "^4.78.0",
+    "zod": "^3.23.8",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0"
+  }
+}
