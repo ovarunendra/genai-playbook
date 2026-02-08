@@ -5,14 +5,17 @@ This directory contains working Node.js examples
 ## Setup
 
 1. **Install Dependencies**
+
    ```bash
    npm install
    ```
 
 2. **Set up Environment Variables**
+
    ```bash
    cp .env.example .env
    ```
+
    Then edit `.env` and add your OpenAI API key.
 
 3. **Get an OpenAI API Key**
@@ -23,10 +26,18 @@ This directory contains working Node.js examples
 ## Examples Overview
 
 ### 01. Basic LLM Usage
+
 Learn the fundamentals of making API calls to OpenAI.
 
+- **OpenAI SDK**: `npm run 01_basic_completion`
 - **Agents SDK**: `npm run 01_basic_agent`
 
+### 02. Tool Calling (Function Calling)
+
+Learn how to give LLMs access to external functions and tools.
+
+- **OpenAI SDK**: `npm run 02_tool_calling`
+- **Agents SDK**: `npm run 02_tool_agent`
 
 ## Resources
 
