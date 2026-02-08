@@ -4,6 +4,7 @@
   "description": "Working Node.js examples for AI Agent",
   "type": "module",
   "scripts": {
+    "01_basic_completion": "node 01_basic_llm/openai-sdk.js",
     "01_basic_agent": "node 01_basic_llm/agents-sdk.js"
   },
   "keywords": ["openai", "ai", "agents", "llm", "production"],
