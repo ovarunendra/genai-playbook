@@ -5,14 +5,22 @@
   "type": "module",
   "scripts": {
     "01_basic_completion": "node 01_basic_llm/openai-sdk.js",
-    "01_basic_agent": "node 01_basic_llm/agents-sdk.js"
+    "01_basic_agent": "node 01_basic_llm/agents-sdk.js",
+    "02_tool_calling": "node 02_tool_calling/openai-sdk.js",
+    "02_tool_agent": "node 02_tool_calling/agents-sdk.js"
   },
-  "keywords": ["openai", "ai", "agents", "llm", "production"],
+  "keywords": [
+    "openai",
+    "ai",
+    "agents",
+    "llm",
+    "production"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@openai/agents": "^0.1.0",
-    "openai": "^4.78.0",
+    "@openai/agents": "^0.4.6",
+    "openai": "^6.18.0",
     "zod": "^3.23.8",
     "dotenv": "^16.4.5"
   },
