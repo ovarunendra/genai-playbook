@@ -65,5 +65,3 @@ Generative AI is not just about text. It spans multiple media types.
 - **Productivity:** Boosting developer and team efficiency.
 - **Discovery:** Improving search and product discovery.
 - **Automation:** Streamlining customer support and supply chain operations.
-
-<img src="./posters/01_Intro_to_GenAI.png">

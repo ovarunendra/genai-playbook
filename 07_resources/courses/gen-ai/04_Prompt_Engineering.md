@@ -78,4 +78,3 @@ Breaking complex workflows into subtasks where the output of one prompt becomes 
 - **System Prompts:** Use the system message to set global rules (e.g., "Always answer in JSON").
 - **Prompt Libraries:** Maintain a collection of pre-tested prompts to ensure team consistency.
 
-<img src="./posters/04_Prompt_Engineering.png">

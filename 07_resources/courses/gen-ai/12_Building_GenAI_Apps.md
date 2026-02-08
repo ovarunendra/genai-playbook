@@ -63,4 +63,3 @@ Choosing the right stack depends on your goal.
 | **Mobile App Backend**     | **FastAPI**      | Acts as a centralized API for multiple frontends .            |
 | **Legacy Systems**         | **Flask/Django** | If your org is already heavy on these, don't fight the grain. |
 
-<img src="./posters/12_Building_GenAI_Apps.png">

@@ -84,4 +84,3 @@ Deciding where to run your model depends on your budget and requirements.
 
 ![Hosting Strategy Trade-offs](diagrams/hosting-tradeoffs.svg)
 
-<img src="./posters/02_GenAI_Landscape.png">

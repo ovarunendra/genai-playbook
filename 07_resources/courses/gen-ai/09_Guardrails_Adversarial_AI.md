@@ -72,4 +72,3 @@ Production guardrails aren't just for hackers; they handle everyday business ris
   - _Fix:_ Input filters block the query, or output filters redact the competitor's name.
 - **Toxicity:** Blocking profanity or abusive language to protect your brand's reputation.
 
-<img src="./posters/09_Guardrails_Adversarial_AI.png">

@@ -55,4 +55,3 @@ To maximize cache hits, you must structure your prompts correctly.
 - **Privacy:** Caches are usually per-model and per-deployment (not shared across different organizations).
 - **What to Cache:** System messages, images, tool definitions, and structured output schemas.
 
-<img src="./posters/07_Prompt_Optimization_Caching.png">

@@ -70,4 +70,3 @@ We are consuming data faster than we create it.
 - **Observation:** We trained on ~1.2 Trillion tokens (RedPajama/Llama datasets), including books, ArXiv papers, and code.
 - **Risk:** We may run out of high-quality public internet data to train on in the next few years.
 
-<img src="./posters/10_Inside_LLM.png">

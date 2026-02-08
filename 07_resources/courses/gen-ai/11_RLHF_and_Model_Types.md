@@ -67,4 +67,3 @@ One size does not fit all. You must choose based on your constraints.
 2.  **SFT:** Learn to follow instructions (The "Assistant").
 3.  **RLHF:** Learn to behave safely (The "Aligned Product").
 
-<img src="./posters/11_RLHF_and_Model_Types.png">

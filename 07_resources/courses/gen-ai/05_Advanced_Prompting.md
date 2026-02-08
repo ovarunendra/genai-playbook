@@ -93,4 +93,3 @@ LLMs naturally output unstructured text (e.g., "Sure! Here is the summary...").
 - **Reasoning Penalty:** Restricting the format can sometimes reduce the model's reasoning quality compared to free-form text.
 - **Complexity:** Defining schemas for deeply nested or complex legal documents is time-consuming.
 
-<img src="./posters/05_Advanced_Prompting.png">

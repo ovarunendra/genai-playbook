@@ -59,4 +59,3 @@ Where is this used in production?
 - **Math/Logic:** Offloading complex calculations to a calculator tool instead of relying on the LLM's internal math (which is error-prone).
 - **Agents:** This is the foundational technology behind autonomous agents that can browse the web or use computers.
 
-<img src="./posters/08_Function_Calling.png">

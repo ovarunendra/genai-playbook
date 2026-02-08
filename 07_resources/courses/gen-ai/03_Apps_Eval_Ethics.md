@@ -63,4 +63,3 @@ As we deploy systems, we must navigate ethical risks.
 - **Transparency:** Users should know they are interacting with AI.
 - **Accountability:** Humans must remain responsible for the system's output,.
 
-<img src="./posters/03_Apps_Eval_Ethics.png">
