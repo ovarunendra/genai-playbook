@@ -7,7 +7,8 @@
     "01_basic_completion": "node 01_basic_llm/openai-sdk.js",
     "01_basic_agent": "node 01_basic_llm/agents-sdk.js",
     "02_tool_calling": "node 02_tool_calling/openai-sdk.js",
-    "02_tool_agent": "node 02_tool_calling/agents-sdk.js"
+    "02_tool_agent": "node 02_tool_calling/agents-sdk.js",
+    "03_evals": "node 03_evals/run-eval.js"
   },
   "keywords": [
     "openai",

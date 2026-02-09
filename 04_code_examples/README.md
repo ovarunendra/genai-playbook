@@ -39,6 +39,12 @@ Learn how to give LLMs access to external functions and tools.
 - **OpenAI SDK**: `npm run 02_tool_calling`
 - **Agents SDK**: `npm run 02_tool_agent`
 
+### 03. Evaluations (Evals)
+
+Learn how to test and measure LLM performance systematically.
+
+- **Run Eval**: `npm run 03_evals`
+
 ## Resources
 
 - [OpenAI API Quickstart](https://platform.openai.com/docs/quickstart)
