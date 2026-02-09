@@ -45,6 +45,12 @@ Learn how to test and measure LLM performance systematically.
 
 - **Run Eval**: `npm run 03_evals`
 
+### 04. RAG (Retrieval Augmented Generation)
+
+Learn how to give LLMs access to external knowledge through vector search.
+
+- **Run RAG Example**: `npm run 04_rag`
+
 ## Resources
 
 - [OpenAI API Quickstart](https://platform.openai.com/docs/quickstart)
