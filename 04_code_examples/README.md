@@ -51,6 +51,12 @@ Learn how to give LLMs access to external knowledge through vector search.
 
 - **Run RAG Example**: `npm run 04_rag`
 
+### 05. Structured Outputs
+
+Learn how to get guaranteed JSON responses from LLMs.
+
+- **Run Example**: `npm run 05_structured_outputs`
+
 ## Resources
 
 - [OpenAI API Quickstart](https://platform.openai.com/docs/quickstart)
