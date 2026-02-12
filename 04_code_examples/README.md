@@ -63,6 +63,13 @@ Learn how to implement approval flows for AI actions.
 
 - **Run Example**: `npm run 06_human_in_loop`
 
+### 07. History Management
+
+Learn strategies for managing conversation history and token limits.
+
+- **Window Slicing**: `npm run 07_history_management`
+- **Summarization**: `npm run 07_summarization`
+
 ## Resources
 
 - [OpenAI API Quickstart](https://platform.openai.com/docs/quickstart)

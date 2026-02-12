@@ -11,7 +11,9 @@
     "03_evals": "node 03_evals/run-eval.js",
     "04_rag": "node 04_rag/openai-sdk.js",
     "05_structured_outputs": "node 05_structured_outputs/openai-sdk.js",
-    "06_human_in_loop": "node 06_human_in_loop/openai-sdk.js"
+    "06_human_in_loop": "node 06_human_in_loop/openai-sdk.js",
+    "07_history_management": "node 07_history_management/window-slicing.js",
+    "07_summarization": "node 07_history_management/summarization.js"
   },
   "keywords": [
     "openai",
