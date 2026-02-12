@@ -57,6 +57,12 @@ Learn how to get guaranteed JSON responses from LLMs.
 
 - **Run Example**: `npm run 05_structured_outputs`
 
+### 06. Human in the Loop
+
+Learn how to implement approval flows for AI actions.
+
+- **Run Example**: `npm run 06_human_in_loop`
+
 ## Resources
 
 - [OpenAI API Quickstart](https://platform.openai.com/docs/quickstart)

@@ -10,7 +10,8 @@
     "02_tool_agent": "node 02_tool_calling/agents-sdk.js",
     "03_evals": "node 03_evals/run-eval.js",
     "04_rag": "node 04_rag/openai-sdk.js",
-    "05_structured_outputs": "node 05_structured_outputs/openai-sdk.js"
+    "05_structured_outputs": "node 05_structured_outputs/openai-sdk.js",
+    "06_human_in_loop": "node 06_human_in_loop/openai-sdk.js"
   },
   "keywords": [
     "openai",
