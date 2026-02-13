@@ -70,10 +70,21 @@ Learn strategies for managing conversation history and token limits.
 - **Window Slicing**: `npm run 07_history_management`
 - **Summarization**: `npm run 07_summarization`
 
+### 08. Streaming
+
+Learn how to stream responses for better UX.
+
+- **Run Example**: `npm run 08_streaming`
+
+### 08. Complete Agent Example
+
+Learn how to build a production-ready agent with all the features.
+
+- **Run Example**: `npm run 09_complete`
+
 ## Resources
 
 - [OpenAI API Quickstart](https://platform.openai.com/docs/quickstart)
-- [OpenAI Agents SDK - Python](https://openai.github.io/openai-agents-python)
 - [OpenAI Agents SDK - TypeScript](https://openai.github.io/openai-agents-js)
 - [OpenAI API Reference](https://platform.openai.com/docs/api-reference)
 
